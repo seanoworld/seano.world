@@ -83,3 +83,9 @@ footer {
   margin: auto;
   width: 90%;
 }
+.shop {
+  width: 15%;
+  position: absolute;
+  top: 25%;
+  right: 3%;
+}
