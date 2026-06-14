@@ -1,56 +1,59 @@
+* {
+  box-sizing: border-box;
+}
 
 body {
-  background-color: white;
+  margin: 0;
+  font-family: Arial;
 }
-.h1 {
-  margin: auto;
+
+.header {
+  text-align: center;
+  padding: 32px;
 }
-.flex-container {
+
+.row {
+  display: -ms-flexbox; /* IE10 */
   display: flex;
-  flex-direction: row;
-}
-.gallery {
-  float: left;
-  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
   flex-wrap: wrap;
-  justify-content: flex-start;
-  margin: right;
- 
-}
-.gallery-item {
-  float: left;
-  margin: auto;
-  border: 1px solid #ccc;
-  width: 20%;
+  padding: 0 4px;
+  transition: transform 0.3 ease;
 }
 
-.gallery-item:hover {
-  border: 1px solid #777;
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
 }
 
-.gallery-item img {
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
   width: 100%;
-  height: auto;
+  margin-bottom: 1rem;
+}
+  
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
 }
 
-.gallery2 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  margin: auto;
-}
-.gallery-item2 {
-  margin: auto;
-  border: 1px solid #ccc;
-  width: 20%;
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
 }
 
-.gallery-item2:hover {
-  border: 1px solid #777;
-}
 
-.gallery-item2 img {
-  width: 100%;
-  height: auto;
-}
 
