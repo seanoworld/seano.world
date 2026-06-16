@@ -1,3 +1,11 @@
+:root {
+  font-family: Inter, sans-serif;
+  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+}
+@supports (font-variation-settings: normal) {
+  :root { font-family: InterVariable, sans-serif; }
+}
+
 .navlist {
   justify-content: center;
   width: 100%;
@@ -6,9 +14,11 @@
 
 }
 .nav_container {
+  margin: auto;
+  padding-top: 0%;
   background-color:black;
   opacity: 0.8;
-  width: 100%;
+  width: 98%;
 
 }
 #header {
@@ -23,9 +33,8 @@
 
 body {
   background-image: url("back.png");
-  background-repeat: no-repeat;
   background-position: center top;
-  background-size: cover;
+  background-size: contain;
 }
 
 ul {
@@ -70,6 +79,94 @@ a:active {
   color: firebrick;
   background-color: black;
 }
+
+
+.gallery_title{
+  margin: auto;
+  background-color:white;
+  width: 70%;
+  text-align: center;
+  padding: 1px;
+
+}
+.gallery_container{
+  margin: auto;
+  background-color: white;
+  width: 100%;
+}
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 20%;
+  max-width: 25%;
+  padding: 0 10px;
+}
+
+.column img {
+  margin-top: 20px;
+  vertical-align: middle;
+  width: 100%;
+  margin-bottom: 1rem;
+  transition: transform 0.4s ease;filter 0.4s ease;
+}
+
+/*Comics page section*/
+.comics_gallery_container{
+  margin: auto;
+  background-color: white;
+  width: 100%;
+  
+}
+.comics_row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+ 
+}
+
+/* Create four equal columns that sits next to each other */
+.comics_column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 20%;
+  max-width: 25%;
+  padding: 0 10px;
+    
+}
+
+.comics_column img {
+  margin-top: 20px;
+  vertical-align: middle;
+  width: 100%;
+  margin-bottom: 1rem;
+  transition: transform 0.4s ease;filter 0.4s ease;
+}
+.column img {
+  margin-top: 0px;
+  vertical-align: middle;
+  width: 100%;
+  margin-bottom: 1rem;
+  transition: transform 0.4s ease;filter 0.4s ease;
+}
+.image_container img {
+
+  object-fit: cover; /* Keeps image proportions intact */
+  transition: transform 0.4s ease, filter 0.4s ease; /* Makes the pop smooth */
+}
+
+.image_container:hover img {
+  transform: scale(1.1); /* Scales up by 10% */
+}
+
 footer {
   position: relative;
   bottom: 0;
@@ -84,6 +181,40 @@ footer {
   width: 90%;
 }
 
-.gallery{
-  column-count: 4;
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .comics_column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .comics_column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
 }
