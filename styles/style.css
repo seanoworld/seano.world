@@ -37,6 +37,9 @@ body {
   background-size: contain;
 }
 
+/* this is for the nav bar */
+/* this is for the nav bar */
+/* this is for the nav bar */
 ul {
   display: flex;
   flex-wrap:wrap;
@@ -79,6 +82,11 @@ a:active {
   color: firebrick;
   background-color: black;
 }
+
+/* this is for the nav bar */
+/* this is for the nav bar */
+/* this is for the nav bar */ 
+
 
 
 .gallery_title{
@@ -130,7 +138,8 @@ a:active {
   display: flex;
   -ms-flex-wrap: wrap; /* IE10 */
   flex-wrap: wrap;
-  padding: 0 4px;
+  padding: 10 50px;
+  justify-content: center;
  
 }
 
@@ -138,7 +147,7 @@ a:active {
 .comics_column {
   -ms-flex: 25%; /* IE10 */
   flex: 20%;
-  max-width: 25%;
+  max-width:25%;
   padding: 0 10px;
     
 }
@@ -218,3 +227,18 @@ footer {
     max-width: 100%;
   }
 }
+
+
+.castle_container {
+  background-color: white;
+  margin: auto;
+  width: 90%;
+  padding: 50px;
+  text-align: center;
+}
+
+.castle_container img{
+  width: 40%;
+  padding: 10px;
+}
+
