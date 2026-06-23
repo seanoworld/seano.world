@@ -1,0 +1,277 @@
+:root {
+  font-family: Inter, sans-serif;
+  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+}
+@supports (font-variation-settings: normal) {
+  :root { font-family: InterVariable, sans-serif; }
+}
+
+.navlist {
+  justify-content: center;
+  width: 100%;
+  max-width: 1300px;
+  margin: 15px auto;
+
+}
+.nav_container {
+  margin: auto;
+  padding-top: 0%;
+  background-color:black;
+  opacity: 0.8;
+  width: 98%;
+
+}
+#header {
+  display: flex;
+  margin: auto;
+  width: 98%;
+  padding: 0;
+}
+#header img {
+  width: 100%;
+}
+
+body {
+  background-image: url("back.png");
+  background-position: center top;
+  background-size: contain;
+}
+
+/* this is for the nav bar */
+/* this is for the nav bar */
+/* this is for the nav bar */
+ul {
+  display: flex;
+  flex-wrap:wrap;
+}
+
+ul li a {
+  padding-left: 90px;
+  padding-right: 90px;
+  font-size: 25px;
+  text-decoration: none;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.flex-container div {
+  display: flex;
+  margin: 15px;
+}
+a:link {
+  color: white;
+  text-decoration: none;
+}
+a:visited {
+  color: white;
+  background-color: black;
+}
+a:hover {
+  text-decoration: none;
+  color: red;
+  background-color: black;
+}
+
+a:active {
+  color: firebrick;
+  background-color: black;
+}
+
+/* this is for the nav bar */
+/* this is for the nav bar */
+/* this is for the nav bar */ 
+
+
+
+.gallery_title{
+  margin: auto;
+  background-color:white;
+  width: 70%;
+  text-align: center;
+  padding: 1px;
+
+}
+.gallery_container{
+  margin: auto;
+  background-color: white;
+  width: 100%;
+}
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 20%;
+  max-width: 25%;
+  padding: 0 10px;
+}
+
+.column img {
+  margin-top: 20px;
+  vertical-align: middle;
+  width: 100%;
+  margin-bottom: 1rem;
+  transition: transform 0.4s ease;filter 0.4s ease;
+}
+
+/*Comics page section*/
+.comics_gallery_container{
+  margin: auto;
+  background-color: white;
+  width: 100%;
+  
+}
+.comics_row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 10 50px;
+  justify-content: center;
+ 
+}
+
+/* Create four equal columns that sits next to each other */
+.comics_column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 20%;
+  max-width:25%;
+  padding: 0 10px;
+    
+}
+
+.comics_column img {
+  margin-top: 20px;
+  vertical-align: middle;
+  width: 100%;
+  margin-bottom: 1rem;
+  transition: transform 0.4s ease;filter 0.4s ease;
+}
+.column img {
+  margin-top: 0px;
+  vertical-align: middle;
+  width: 100%;
+  margin-bottom: 1rem;
+  transition: transform 0.4s ease;filter 0.4s ease;
+}
+.image_container img {
+
+  object-fit: cover; /* Keeps image proportions intact */
+  transition: transform 0.4s ease, filter 0.4s ease; /* Makes the pop smooth */
+}
+
+.image_container:hover img {
+  transform: scale(1.1); /* Scales up by 10% */
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 90;
+  color: white;
+  background-color: black;
+  padding: 8px;
+  text-align: center;
+  z-index: 1000;
+  margin: auto;
+  width: 90%;
+}
+
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .comics_column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .comics_column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+
+.castle_container {
+  background-color: white;
+  margin: auto;
+  width: 90%;
+  padding: 50px;
+  text-align: center;
+}
+
+.castle_container img{
+  width: 40%;
+  padding: 10px;
+}
+
+.rcp_container{
+    display: flex;
+    align-items: center; /* Aligns text perfectly in the middle vertically */
+    gap: 20px; /* Adds space between the image and the article */
+    padding: 20px;
+}
+
+.rcp_container img {
+    width: 30%; /* Sets image to take up 30% of the container width */
+    height: auto;
+}
+
+.rcp_container article {
+    width: 70%; /* Gives the article the remaining 70% of the space */
+    padding: 60px;
+}
+
+@media (max-width: 768px) {
+    .rcp_container {
+        flex-direction: column; /* Stacks the image and article vertically */
+    }
+    
+    .rcp_container img, 
+    .rcp_container article {
+        width: 100%; /* Makes both elements take up the full screen width */
+    }
+}
+
+.beat_float_right {
+  float: right;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
