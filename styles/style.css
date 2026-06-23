@@ -242,3 +242,36 @@ footer {
   padding: 10px;
 }
 
+.rcp_container{
+    display: flex;
+    align-items: center; /* Aligns text perfectly in the middle vertically */
+    gap: 20px; /* Adds space between the image and the article */
+    padding: 20px;
+}
+
+.rcp_container img {
+    width: 30%; /* Sets image to take up 30% of the container width */
+    height: auto;
+}
+
+.rcp_container article {
+    width: 70%; /* Gives the article the remaining 70% of the space */
+    padding: 60px;
+}
+
+@media (max-width: 768px) {
+    .rcp_container {
+        flex-direction: column; /* Stacks the image and article vertically */
+    }
+    
+    .rcp_container img, 
+    .rcp_container article {
+        width: 100%; /* Makes both elements take up the full screen width */
+    }
+}
+
+.beat_float_right {
+  float: right;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
