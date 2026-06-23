@@ -64,24 +64,27 @@ ul li a {
   display: flex;
   margin: 15px;
 }
+
+.nav_link.active{
+  color: red;
+}
 a:link {
   color: white;
   text-decoration: none;
 }
 a:visited {
   color: white;
-  background-color: black;
 }
 a:hover {
   text-decoration: none;
   color: red;
-  background-color: black;
 }
 
 a:active {
   color: firebrick;
   background-color: black;
 }
+
 
 /* this is for the nav bar */
 /* this is for the nav bar */
@@ -275,3 +278,53 @@ footer {
   margin-left: 15px;
   margin-bottom: 10px;
 }
+
+.galleryopen_container{
+    display: flex;
+    align-items:  /* Aligns text perfectly in the middle vertically */
+    gap: 20px; /* Adds space between the image and the article */
+    padding: 20px;
+}
+
+.galleryopen_container img {
+    width: 50%; /* Sets image to take up 30% of the container width */
+    height: auto;
+}
+
+.galleryopen_container article {
+    width: 40%; /* Gives the article the remaining 70% of the space */
+    padding: 60px;
+}
+
+@media (max-width: 768px) {
+    .galleryopen_container {
+        flex-direction: column; /* Stacks the image and article vertically */
+    }
+    
+    .galleryopen_container img, 
+    .galleryopen_container article {
+        width: 100%; /* Makes both elements take up the full screen width */
+    }
+}
+
+.backbutton{
+  position: fixed;   /* Locks the image relative to the browser viewport */
+  top: 70%;         /* Distance from the top edge */
+  right: 20px;       /* Distance from the right edge */
+  width: 400px;      /* Set a fixed size for the image */
+  height: auto;
+  z-index: 1000;     /* Ensures it floats on top of other content */
+}
+
+
+.contact_container{
+  background-color: white;
+  width: 50%;
+  margin: auto;}
+
+.contact_container h1{
+ padding: 20px;
+ text-align: center;
+}
+
+
