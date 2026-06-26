@@ -1,0 +1,57 @@
+img{
+    width: 100%;
+    max-width: 400px;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+.wrapper{
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    background-color: white;
+    height: 700px;
+
+    
+}
+
+.intro {
+    flex:1;
+    background-color: white;
+}
+
+body {
+position: relative;
+  background-image: url("back.png");
+  background-position: center top;
+  background-size: contain;
+}
+
+.buttons {
+    position: absolute;
+ top: 600px;
+  right: 80px;
+  width: 200px;
+  height: 100px;
+    display: flex;
+padding: 10px;
+justify-content: center;}
+
+.home {
+    padding: 20px;
+    justify-content: center;
+    width: 50%;
+}   
+.back {
+    padding: 20px;
+    justify-content: center;
+    width: 20%;
+}   
+.forward {
+    padding: 20px;
+    justify-content: center;
+    width: 20%;
+}   
