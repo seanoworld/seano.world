@@ -6,16 +6,14 @@ img{
 }
 
 .wrapper{
-    padding: 30px;
+    padding: 50px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 5rem;
     background-color: white;
-    height: 700px;
-
-    
+    height: 750px;
 }
 
 .intro {
@@ -32,7 +30,7 @@ position: relative;
 
 .buttons {
     position: absolute;
- top: 600px;
+ top: 80%;
   right: 80px;
   width: 200px;
   height: 100px;
@@ -55,3 +53,16 @@ justify-content: center;}
     justify-content: center;
     width: 20%;
 }   
+
+@media (max-width: 768px) {
+   .buttons {
+    position: absolute;
+    top: 450px;
+
+   }}
+
+   @media (max-width: 768px){
+    .wrapper{
+        height: 825px;
+    }
+   }
