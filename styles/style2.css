@@ -124,3 +124,9 @@ justify-content: center;}
         height: 825px;
     }
    }
+
+@media (max-width: 767px) {
+  .modal {
+    display: none !important;
+  }
+}
