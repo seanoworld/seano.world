@@ -130,3 +130,15 @@ justify-content: center;}
     display: none !important;
   }
 }
+
+@media (max-width: 767px) {
+  .modal-content {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .modal-content img {
+    display: none !important;
+  }
+}
