@@ -6,7 +6,7 @@ img{
   margin: 0 auto;        /* Centers it within the modal container */
 }
 
-.wrapper{
+.wrapper {
     padding: 50px;
     display: flex;
     flex-wrap: wrap;
@@ -14,7 +14,7 @@ img{
     justify-content: center;
     gap: 5rem;
     background-color: white;
-    height: 750px;
+    min-height: 750px; /* instead of height */
 }
 
 .intro {
@@ -39,6 +39,19 @@ position: relative;
 padding: 10px;
 justify-content: center;}
 
+.buttons img {
+    width: 50px;
+    height: auto;
+}
+
+.back,
+.home,
+.forward {
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .home {
     padding: 20px;
     justify-content: center;
@@ -87,20 +100,52 @@ justify-content: center;}
   display: flex;
   opacity: 1;
 }
-
+@media (max-width: 768px) {
+  .back img,
+  .forward img {
+    width: 30px;
+    height: auto;
+  }
+    .home img {
+    width: 50px;
+    height: auto;
+  }
+}
 
 @media (max-width: 768px) {
-   .buttons {
-    position: absolute;
-    top: 450px;
 
-   }}
-
-   @media (max-width: 768px){
-    .wrapper{
-        height: 825px;
+    .wrapper {
+        flex-direction: column;
+        gap: 2rem;
+        height: auto;
+        min-height: auto;
+        padding: 20px;
     }
-   }
+
+    .buttons {
+        position: static;
+        width: 100%;
+        height: auto;
+
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+
+        margin-top: 1rem;
+    }
+
+    .buttons img {
+        max-width: 50px;
+        height: auto;
+    }
+
+    .intro {
+        width: 100%;
+        text-align: center;
+    }
+  
+    
+}
 
 @media (max-width: 767px) {
   .modal {
