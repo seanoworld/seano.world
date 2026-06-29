@@ -1,0 +1,181 @@
+#header {
+  display: flex;
+  margin: auto;
+  width: 98%;
+  padding: 0;
+}
+#header img {
+  width: 100%;
+}
+/* this is for the nav bar */
+.navlist {
+  width: 100%;
+  max-width: 1300px;
+  margin: 15px auto;
+
+}
+.navlist a {
+  font-family: "Roboto Mono", monospace;
+}
+.nav_container {
+  margin: auto;
+  padding-top: 0%;
+  background-color:black;
+  opacity: 0.8;
+  width: 98%;
+
+}
+ul {
+  display: flex;
+  flex-wrap:wrap;
+}
+
+ul li a {
+  padding-left: 90px;
+  padding-right: 90px;
+  font-size: 25px;
+  text-decoration: none;
+  color: white;
+  
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.flex-container div {
+  display: flex;
+  margin: 15px;
+}
+
+.nav_link.active{
+  color: red;
+}
+a:link {
+  color: white;
+  text-decoration: none;
+}
+a:visited {
+  color: white;
+}
+a:hover {
+  text-decoration: none;
+  color: red;
+}
+
+a:active {
+  color: firebrick;
+  background-color: black;
+}
+/* this is for the nav bar */
+
+/*BODY*/
+body {
+  background-image: url("back.png");
+  background-position: center top;
+  background-size: contain;
+    font-family: "Roboto Mono", monospace;
+}
+/*BODY*/
+
+/*blob header*/
+.intro {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  width: 100%;        /* IMPORTANT */
+  max-width: 100%;    /* IMPORTANT */
+
+  padding: 15px;
+  box-sizing: border-box;
+  background-color: white;
+  margin-bottom: 10px;
+}
+.intro-img {
+  width: 350px;
+  height: auto;
+  flex-shrink: 0;
+}
+.intro-text {
+  flex: 1;
+  min-width: 0;   /* IMPORTANT: prevents flex overflow bugs */
+}
+/*blob header*/
+
+/*BLOB CONTENT*/
+.blob_container a {
+    width: 30%;
+   
+}
+.blob_container a img {
+    width: 100%;
+    height: auto;
+    display: block;
+    
+}
+/*blob page containers*/
+.blob_container{
+    display: flex;
+    align-items: center; /* Aligns text perfectly in the middle vertically */
+    gap: 20px; /* Adds space between the image and the article */
+    padding: 20px;
+    background-color: white;
+}
+
+.blob_container img {
+    width: 30%; /* Sets image to take up 30% of the container width */
+    height: auto;
+}
+
+.blob_container article {
+    width: 20%; /* Gives the article the remaining 70% of the space */
+    flex:1;
+    padding: 60px;
+    position: relative;
+    padding-bottom: 35px; /* room for date */
+}
+
+.post-date {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    margin: 0;
+    color: lightgray;
+    font-size: 0.85rem;
+}
+
+
+/*FOR MOBILE*/
+@media (max-width: 768px) {
+  .intro {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intro-img {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .blob_container {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+  }
+.blob_container a{
+    width: 100%;
+}
+  .blob_container img {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .blob_container article {
+    width: 100%;
+    padding: 20px;
+  }
+}
+/*FOR MOBILE*/

@@ -6,21 +6,7 @@
   :root { font-family: InterVariable, sans-serif; }
 }
 
-.navlist {
-  justify-content: center;
-  width: 100%;
-  max-width: 1300px;
-  margin: 15px auto;
 
-}
-.nav_container {
-  margin: auto;
-  padding-top: 0%;
-  background-color:black;
-  opacity: 0.8;
-  width: 98%;
-
-}
 #header {
   display: flex;
   margin: auto;
@@ -30,16 +16,24 @@
 #header img {
   width: 100%;
 }
+/* this is for the nav bar */
+.navlist {
+  width: 100%;
+  max-width: 1300px;
+  margin: 15px auto;
 
-body {
-  background-image: url("back.png");
-  background-position: center top;
-  background-size: contain;
 }
+.navlist a {
+  font-family: "Roboto Mono", monospace;
+}
+.nav_container {
+  margin: auto;
+  padding-top: 0%;
+  background-color:black;
+  opacity: 0.8;
+  width: 98%;
 
-/* this is for the nav bar */
-/* this is for the nav bar */
-/* this is for the nav bar */
+}
 ul {
   display: flex;
   flex-wrap:wrap;
@@ -51,7 +45,6 @@ ul li a {
   font-size: 25px;
   text-decoration: none;
   color: white;
-  font-family: Arial, Helvetica, sans-serif;
   
 }
 
@@ -84,13 +77,15 @@ a:active {
   color: firebrick;
   background-color: black;
 }
-
-
 /* this is for the nav bar */
-/* this is for the nav bar */
-/* this is for the nav bar */ 
 
+body {
+  background-image: url("back.png");
+  background-position: center top;
+  background-size: contain;
+    font-family: "Roboto Mono", monospace;
 
+}
 
 .gallery_title{
   margin: auto;
@@ -231,7 +226,7 @@ footer {
   }
 }
 
-
+/*comic gallery containers*/
 .castle_container {
   background-color: white;
   margin: auto;
@@ -245,86 +240,92 @@ footer {
   padding: 10px;
 }
 
-.rcp_container{
-    display: flex;
-    align-items: center; /* Aligns text perfectly in the middle vertically */
-    gap: 20px; /* Adds space between the image and the article */
-    padding: 20px;
-}
 
-.rcp_container img {
-    width: 30%; /* Sets image to take up 30% of the container width */
-    height: auto;
-}
 
-.rcp_container article {
-    width: 70%; /* Gives the article the remaining 70% of the space */
-    padding: 60px;
-}
 
-@media (max-width: 768px) {
-    .rcp_container {
-        flex-direction: column; /* Stacks the image and article vertically */
-    }
-    
-    .rcp_container img, 
-    .rcp_container article {
-        width: 100%; /* Makes both elements take up the full screen width */
-    }
+/*GALLERY BUTTON_RACCOON*/
+.image-button{
+  width: 100px;
+  height: 100px;
+  background-image:url(images/backbutton.gif);
+  background-size: cover;
+  border: none;
+  cursor: pointer;
 }
+/*GALLERY BUTTON_RACCOON*/
 
-.beat_float_right {
-  float: right;
-  margin-left: 15px;
-  margin-bottom: 10px;
-}
 
-.galleryopen_container{
-    display: flex;
-    align-items:  /* Aligns text perfectly in the middle vertically */
-    gap: 20px; /* Adds space between the image and the article */
-    padding: 20px;
-}
 
-.galleryopen_container img {
-    width: 50%; /* Sets image to take up 30% of the container width */
-    height: auto;
-}
-
-.galleryopen_container article {
-    width: 40%; /* Gives the article the remaining 70% of the space */
-    padding: 60px;
-}
-
-@media (max-width: 768px) {
-    .galleryopen_container {
-        flex-direction: column; /* Stacks the image and article vertically */
-    }
-    
-    .galleryopen_container img, 
-    .galleryopen_container article {
-        width: 100%; /* Makes both elements take up the full screen width */
-    }
-}
-
-.backbutton{
-  position: fixed;   /* Locks the image relative to the browser viewport */
-  top: 70%;         /* Distance from the top edge */
-  right: 20px;       /* Distance from the right edge */
-  width: 400px;      /* Set a fixed size for the image */
-  height: auto;
-  z-index: 1000;     /* Ensures it floats on top of other content */
-}
 
 
 .contact_container{
-  background-color: white;
-  width: 50%;
-  margin: auto;}
+    background-color: white;
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;}
 
 .contact_container h1{
  padding: 20px;
  text-align: center;
+ 
 }
 
 
+.contact-section {
+    max-width: 1300px;
+    margin: 60px auto 0 auto;
+    padding: 40px;
+    background: white;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.contact-left,
+.contact-right {
+    flex: 1;
+}
+
+.contact-left img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.contact-right h2 {
+    margin-top: 0;
+}
+
+.contact-right form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-right input,
+.contact-right textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.contact-right textarea {
+    min-height: 150px;
+}
+
+.contact-right button {
+    width: fit-content;
+    padding: 10px 20px;
+}
+
+
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+    }
+}
