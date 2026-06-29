@@ -9,6 +9,9 @@
     <link rel="icon" type="image/x-icon" href="images/star.ico" />
     <link rel="preconnect" href="https://rsms.me/">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
   </head>
   <body>
     <div id="header">
@@ -29,37 +32,46 @@
       <p>☃ SF 5130 Riso prints ☃</p>
     </div>
     <br>
-    
-      <div class="gallery_container">
-    <div class="row"> 
-    <div class="column">
+   <!-- <div class="gallery"> this was chat gpt helping me make the gallery work correectly on mobile....work in progress
+        <span class="image_container"><a target="_top" href="gallery_swallowtail.html"><img src="images/swallowtails.jpg" alt="swallowtails"></a></span>
+ <span class="image_container"><a target="_top" href="gallery_pigs.html" ><img src="images/pigs.jpg" alt="piggies" ></a></span>
+ <span class="image_container"><a target="_top" href="gallery_shark.html"><img src="images/sharkriz.jpg" alt="thoughtless shark"></a></span>
+  <span class="image_container"><a target="_top" href="gallery_karaoke.html"><img src="images/karaoke.jpg" alt="Bernice's Tavern Karaoke"></a></span>
+   <span class="image_container"><a target="_top" href="gallery_subway.html"><img src="images/subway.jpg"  alt="Chicago Red Line"></a></span>
+   <span class="image_container"><a target="_top" href="gallery_ puppydragon.html"><img src="images/puppydragon.jpg" alt="Puppy Dragon"></a></span>
+         <span class="image_container"><a target="_top" href="gallery_ufo.html"><img src="images/seanufo.jpg" alt="Hello"></a></span>
+      <span class="image_container"><a target="_top" href="gallery_nerds.html"><img src="images/nerds.jpg" alt="nerds"></a></span>
+      <span class="image_container"><a target="_top" href="gallery_jackalope.html"><img src="images/xmasjack1.jpg" alt="Jackalope Coffee and Tea House Holiday Menu"></a></span>
+       <span class="image_container"><a target="_top" href="gallery_skylark.html"><img src="images/skylark.jpg" alt="Skyark"></a></span>
+
+    </div>-->
+    <div class="gallery_container">
+   
+      <div class="row"> 
+   
+      <div class="column">
       <span class="image_container"><a target="_top" href="gallery_swallowtail.html"><img src="images/swallowtails.jpg" alt="swallowtails"></a></span>
       <span class="image_container"><a target="_top" href="gallery_subway.html"><img src="images/subway.jpg"  alt="Chicago Red Line"></a></span>
-      <span class="image_container"><a target="_top" href="gallery_jackalope.html"><img src="images/xmasjack1.jpg" alt="Jackalope Coffee and Tea House Holiday Menu"></a></span>
-
-    </div>
-    <div class="column">
+      <span class="image_container"><a target="_top" href="gallery_jackalope.html"><img src="images/xmasjack1.jpg" alt="Jackalope Coffee and Tea House Holiday Menu"></a></span></div>
+    
+      <div class="column">
       <span class="image_container"><a target="_top" href="gallery_pigs.html" ><img src="images/pigs.jpg" alt="piggies" ></a></span>
       <span class="image_container"><a target="_top" href="gallery_ puppydragon.html"><img src="images/puppydragon.jpg" alt="Puppy Dragon"></a></span>
-      <span class="image_container"><a target="_top" href="gallery_skylark.html"><img src="images/skylark.jpg" alt="Skyark"></a></span>
-
-
-
-   </div>  
-   <div class="column">
-    <span class="image_container"><a target="_top" href="gallery_shark.html"><img src="images/sharkriz.jpg" alt="thoughtless shark"></a></span>
-      <span class="image_container"><a target="_top" href="gallery_ufo.html"><img src="images/seanufo.jpg" alt="Hello"></a></span>
-
-    </div>
-   <div class="column">
+      <span class="image_container"><a target="_top" href="gallery_skylark.html"><img src="images/skylark.jpg" alt="Skyark"></a></span></div>  
+      
+      <div class="column">
+      <span class="image_container"><a target="_top" href="gallery_shark.html"><img src="images/sharkriz.jpg" alt="thoughtless shark"></a></span>
+      <span class="image_container"><a target="_top" href="gallery_ufo.html"><img src="images/seanufo.jpg" alt="Hello"></a></span></div>
+      
+      <div class="column">
       <span class="image_container"><a target="_top" href="gallery_karaoke.html"><img src="images/karaoke.jpg" alt="Bernice's Tavern Karaoke"></a></span>
-      <span class="image_container"><a target="_top" href="gallery_nerds.html"><img src="images/nerds.jpg" alt="nerds"></a></span>
+      <span class="image_container"><a target="_top" href="gallery_nerds.html"><img src="images/nerds.jpg" alt="nerds"></a></span></div>
+      
+      </div>
+    
+    </div>
 
-    </div>
-    </div>
-    </div>
-
-        <!--
+        <!-- this is the cool page inside a page effect
    <div class="column">
       <span class="image_container"><a target="_top" href="images/.jpg"><img src="images/.jpg" alt=""></a></span>
       <span class="image_container"><a target="_top" href="images/.jpg"><img src="images/.jpg" alt=""></a></span>
@@ -77,9 +89,31 @@
         ></iframe>
       </div>-->
       
-    </div>
+    <section class="contact-section">
 
-<div class="contact_container">
+  <div class="contact-left">
+    <img src="images/about-image.jpg" alt="Artwork">
+    <p>
+      Available for illustration, murals, comics, design work,
+      and other creative projects. Reach out if you'd like to
+      collaborate.
+    </p>
+  </div>
+
+  <div class="contact-right">
+    <h2>Want to work together? Get in touch!</h2>
+
+    <form action="https://formsubmit.co/hello@seano.world" method="POST">
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Submit Form</button>
+    </form>
+  </div>
+
+</section>
+
+<!--<div class="contact_container">
   <h1>Want to work together? Get in touch!</h1>
   <form target="_blank" action="https://formsubmit.co/hello@seano.world" method="POST">
     <div class="form_group">
@@ -97,7 +131,7 @@
     </div>
     <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
   </form>
-</div>
+</div>-->
     <br />
     <footer>copyrights © 2026 Sean Mac. Images on this site may not be used or distributed without permission. Website built by me using html/css.</footer>
   </body>
