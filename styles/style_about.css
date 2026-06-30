@@ -1,0 +1,205 @@
+#header {
+  display: flex;
+  margin: auto;
+  width: 98%;
+  padding: 0;
+}
+#header img {
+  width: 100%;
+}
+/* this is for the nav bar */
+.navlist {
+  width: 100%;
+  max-width: 1300px;
+  margin: 15px auto;
+
+}
+.navlist a {
+  font-family: "Roboto Mono", monospace;
+}
+.nav_container {
+  margin: auto;
+  padding-top: 0%;
+  background-color:black;
+  opacity: 0.8;
+  width: 98%;
+
+}
+ul {
+  display: flex;
+  flex-wrap:wrap;
+}
+
+ul li a {
+  padding-left: 90px;
+  padding-right: 90px;
+  font-size: 25px;
+  text-decoration: none;
+  color: white;
+  
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.flex-container div {
+  display: flex;
+  margin: 15px;
+}
+
+.nav_link.active{
+  color: red;
+}
+a:link {
+  color: white;
+  text-decoration: none;
+}
+a:visited {
+  color: white;
+}
+a:hover {
+  text-decoration: none;
+  color: red;
+}
+
+a:active {
+  color: firebrick;
+  background-color: black;
+}
+/* NAV BAR */
+
+body {
+  background-image: url("back.png");
+  background-position: center top;
+  background-size: contain;
+    font-family: "Roboto Mono", monospace;
+    overflow-x: hidden;
+
+}
+/* PICTURE AND ABOUT ME -VAMP*/
+
+.about_container{
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    max-width: 1300px;
+    margin: 60px auto 0 auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 40px;
+    align-items: flex-start;
+    
+}
+
+.about_left,
+.about_right {
+    flex: 1;
+}
+
+.about_left img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* CV IMAGES */
+.cv {
+    padding: 10px;
+    display: flex;
+   justify-content: center;
+}
+.cv img{
+    width: 45%;
+    height: auto;
+}
+
+/*CONTACT AND FACE*/
+.contact_container{
+    background-color: white;
+    width: 1300px;
+    max-width: 1400px;
+    margin: auto;}
+
+.contact_container h1{
+ padding: 20px;
+ text-align: center;
+ 
+}
+.contact-section {
+    max-width: 1300px;
+    margin:  auto 0 auto;
+    padding: 40px;
+    background: white;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.contact-left,
+.contact-right {
+    flex: 1;
+}
+
+.contact-left img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.contact-right h2 {
+    margin-top: 0;
+}
+
+.contact-right form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-right input,
+.contact-right textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.contact-right textarea {
+    min-height: 150px;
+}
+
+.contact-right button {
+    width: fit-content;
+    padding: 10px 20px;
+}
+
+
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+    }
+.about_container {
+        flex-direction: column;
+    }
+    .cv {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cv img {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .about_left img {
+        width: 100%;
+    }
+    
+}
