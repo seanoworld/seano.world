@@ -104,7 +104,15 @@ body {
     display: block;
     margin-bottom: 20px;
 }
-
+/*CV_TITLE*/
+.cv_title{
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    text-align: left;
+    width: 1300px;
+    color: gray;
+}
 /* CV IMAGES */
 .cv {
     padding: 10px;
@@ -120,7 +128,7 @@ body {
 .contact_container{
     background-color: white;
     width: 1300px;
-    max-width: 1400px;
+    max-width: 1300px;
     margin: auto;}
 
 .contact_container h1{
