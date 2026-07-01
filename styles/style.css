@@ -6,7 +6,7 @@
   :root { font-family: InterVariable, sans-serif; }
 }
 
-
+/*HEADER*/
 #header {
   display: flex;
   margin: auto;
@@ -16,7 +16,10 @@
 #header img {
   width: 100%;
 }
-/* this is for the nav bar */
+/*HEADER*/
+
+
+/*NAV BAR*/
 .navlist {
   width: 100%;
   max-width: 1300px;
@@ -77,14 +80,15 @@ a:active {
   color: firebrick;
   background-color: black;
 }
-/* this is for the nav bar */
+/* NAV BAR */
+
 
 body {
   background-image: url("back.png");
   background-position: center top;
   background-size: contain;
     font-family: "Roboto Mono", monospace;
-
+    overflow-x: hidden;
 }
 
 .gallery_title{
@@ -124,39 +128,8 @@ body {
   transition: transform 0.4s ease;filter 0.4s ease;
 }
 
-/*Comics page section*/
-.comics_gallery_container{
-  margin: auto;
-  background-color: white;
-  width: 100%;
-  
-}
-.comics_row {
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-  padding: 10 50px;
-  justify-content: center;
- 
-}
 
-/* Create four equal columns that sits next to each other */
-.comics_column {
-  -ms-flex: 25%; /* IE10 */
-  flex: 20%;
-  max-width:25%;
-  padding: 0 10px;
-    
-}
 
-.comics_column img {
-  margin-top: 20px;
-  vertical-align: middle;
-  width: 100%;
-  margin-bottom: 1rem;
-  transition: transform 0.4s ease;filter 0.4s ease;
-}
 .column img {
   margin-top: 0px;
   vertical-align: middle;
@@ -208,23 +181,7 @@ footer {
   }
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-  .comics_column {
-    -ms-flex: 50%;
-    flex: 50%;
-    max-width: 50%;
-  }
-}
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .comics_column {
-    -ms-flex: 100%;
-    flex: 100%;
-    max-width: 100%;
-  }
-}
 
 /*comic gallery containers*/
 .castle_container {
@@ -257,7 +214,7 @@ footer {
 
 
 
-
+/*CONTANT AND FACE*/
 .contact_container{
     background-color: white;
     width: 90%;
