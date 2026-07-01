@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>I LIKE MANGA</title>
 
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/style_comics_individual.css" />
     <link rel="icon" type="image/x-icon" href="images/star.ico" />
     <link rel="preconnect" href="https://rsms.me/">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
@@ -19,17 +19,126 @@
       <ul>
         <li><a href="blob.html" target="_self">blob    </a></li>
         <li><a href="index.html" target="_self">drawings</a></li>
-        <li><a href="comics.html" target="_self">comics</a></li>
+        <li><a href="comics.html" target="_self" class="nav_link active">comics</a></li>
         <li><a href="seano.html" target="_self">about</a></li>      </ul>
     </div>
     </div>
 
-<div class="castle_container">
-      
-      <p>this is where I want info about the comic to be</p>
-      
-      <img src="images/manga2.png" style="width: 30%;"><img src="images/manga3.jpg"><img src="images/manga4.jpg">
-      <img src="images/manga5.jpg"><img src="images/manga6.jpg"><img src="images/manga7.jpg">
-      
-      <p>this is where I want to give people the option to buy it.</p></div>
+  <div class="wrapper">
+
+ <div class="card profile">
+  <img src="images/ilikemangacover.jpg" alt="I Like Manga" id="scrollToGallery" style="cursor: ;">
+</div>
+
+  <div class="card intro">
+    <h2><i>I LIKE MANGA</i></h2>
+    <h3>2026</h3>
+    <p><q>This risograph printed comic is about the current big battle going on in the manga, One Piece. This is how I imagine the fight between Luffy and Imu playing out.</q></p>
+    <br>
+    <p>6"x8.5" Saddle-stitch 16 pages<br>
+    Cover is Black, Bright Red, Light Teal, and Yellow Ink on 80lb Domtar Natural <br>
+    Guts are Bright Red and Black on 80lb Domtar Natural</p>
+  </div>
+
+</div>
+
+<div class="gallery" id="gallery">
+
+  <div class="gallery-controls">
+    <button id="prev" class="icon-btn">
+      <img src="buttons/arrowbackward.png">
+    </button>
+
+  <a href="comics.html" class="icon-btn home-btn">
+  <img src="buttons/home.gif">
+  <span class="home-label">home</span>
+</a>
+
+    <button id="next" class="icon-btn">
+      <img src="buttons/arrowforward.png">
+    </button>
+  </div>
+
+  <img id="slide" src="images/ilikemanga0.png">
+
+</div>
+
+<script>
+const images = [
+  "images/ilikemanga0.png",
+  "images/ilikemanga1.png",
+  "images/ilikemanga2.png",
+  "images/ilikemanga3.png"
+];
+
+let index = 0;
+const slide = document.getElementById("slide");
+
+function showImage(i) {
+  index = (i + images.length) % images.length;
+  slide.src = images[index];
+}
+
+/* NAV FUNCTIONS */
+function nextImage() {
+  showImage(index + 1);
+}
+
+function prevImage() {
+  showImage(index - 1);
+}
+
+/* BUTTONS */
+document.getElementById("next").addEventListener("click", nextImage);
+document.getElementById("prev").addEventListener("click", prevImage);
+
+/* IMAGE CLICK (left = prev, right = next) */
+slide.addEventListener("click", (e) => {
+  const rect = slide.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+
+  if (x < rect.width / 2) {
+    prevImage();
+  } else {
+    nextImage();
+  }
+});
+
+/* SWIPE */
+let startX = 0;
+
+slide.addEventListener("touchstart", (e) => {
+  startX = e.touches[0].clientX;
+});
+
+slide.addEventListener("touchend", (e) => {
+  let endX = e.changedTouches[0].clientX;
+  let diff = startX - endX;
+
+  const threshold = 50;
+
+  if (diff > threshold) {
+    nextImage(); // swipe left
+  } else if (diff < -threshold) {
+    prevImage(); // swipe right
+  }
+});
+
+/* SCROLL TO GALLERY (cover image click) */
+document.addEventListener("DOMContentLoaded", function () {
+  const trigger = document.getElementById("scrollToGallery");
+  const target = document.getElementById("gallery");
+
+  if (trigger && target) {
+    trigger.addEventListener("click", () => {
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    });
+  }
+});
+</script>
+
+    <footer>copyrights © 2026 Sean Mac. Images on this site may not be used or distributed without permission. Website built by me using html/css.</footer>
     </body>
