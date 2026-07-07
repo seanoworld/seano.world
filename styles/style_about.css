@@ -8,14 +8,38 @@
   width: 100%;
 }
 /* this is for the nav bar */
-.navlist {
-  width: 100%;
-  max-width: 1300px;
-  margin: 15px auto;
 
+.navlist {
+    width: 100%;
+    max-width: 1300px;
+    margin: 15px auto;
 }
-.navlist a {
-  font-family: "Roboto Mono", monospace;
+
+.navlist ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+}
+
+.navlist li {
+    flex: 1;
+    text-align: center;
+}
+
+.navlist li a {
+    display: block;
+    padding: 15px 0;
+
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+    font-family: "Roboto Mono", monospace;
 }
 .nav_container {
   margin: auto;
@@ -25,19 +49,7 @@
   width: 98%;
 
 }
-ul {
-  display: flex;
-  flex-wrap:wrap;
-}
 
-ul li a {
-  padding-left: 90px;
-  padding-right: 90px;
-  font-size: 25px;
-  text-decoration: none;
-  color: white;
-  
-}
 
 .flex-container {
   display: flex;
@@ -59,16 +71,16 @@ a:link {
 a:visited {
   color: white;
 }
-a:hover {
-  text-decoration: none;
-  color: red;
+.navlist li a:hover {
+    color: red;
+    text-decoration: none;
 }
 
 a:active {
   color: firebrick;
   background-color: black;
 }
-/* NAV BAR */
+/* this is for the nav bar */
 
 body {
   background-image: url("back.png");
