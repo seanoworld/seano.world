@@ -21,11 +21,9 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-
     list-style: none;
     margin: 0;
     padding: 0;
-
     width: 100%;
 }
 
@@ -37,7 +35,6 @@
 .navlist li a {
     display: block;
     padding: 15px 0;
-
     font-size: 25px;
     text-decoration: none;
     color: white;
@@ -140,6 +137,53 @@ body {
   justify-content: center;
   align-items: center;
 }
+.product-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.shopify-button-container {
+    display: flex;
+    justify-content: center;
+}
+.home-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+
+.home-btn img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.home-label {
+    margin-top: 5px;
+    font-family: "Roboto Mono", monospace;
+    font-size: 14px;
+    color: black;
+    text-align: center;
+}
+
+.home-btn:hover .home-label {
+    color: red;
+}
+.gallery-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.gallery-buttons img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
 
 .gallery img {
   width: 100%;
@@ -156,6 +200,10 @@ body {
   display: flex;
   gap: 10px;
   align-items: center;
+}
+.gallery-buttons a:not(.home-btn):hover img {
+    transform: scale(1.15);
+    filter: brightness(0) saturate(100%) invert(25%) sepia(90%) saturate(2000%) hue-rotate(340deg);
 }
 .icon-btn {
   background: none;
@@ -311,4 +359,25 @@ footer {
     font-size: 10px;
     margin-top: 2px;
   }
+}
+
+@media (max-width: 600px) {
+
+    .nav_container {
+        width: 100%;
+    }
+
+    .navlist ul {
+        flex-direction: column;
+    }
+
+    .navlist li {
+        width: 100%;
+    }
+
+    .navlist li a {
+        font-size: 16px;
+        padding: 5px 0;
+    }
+
 }
