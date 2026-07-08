@@ -9,7 +9,7 @@
     <link rel="icon" type="image/x-icon" href="images/star.ico" />
     <link rel="preconnect" href="https://rsms.me/">
     <link rel="preconnect" href="https://sdks.shopifycdn.com">
-    <link rel="preconnect" href="https://37ci98-z7.myshopify.com">
+<link rel="preconnect" href="https://37ci98-z7.myshopify.com">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
   </head>
   <body>
@@ -24,7 +24,7 @@
         <li><a href="comics.html" target="_self" class="nav_link active">comics</a></li>
         <li><a href="seano.html" target="_self">about</a></li>  
         <li><a href="shop.html" target="_self">shop</a></li></ul>
-       </ul>
+       
     </div>
     </div>
 
@@ -45,7 +45,7 @@
 <div class="product-actions">
     <div class="shopify-button-container"><div id='product-component-1783460251818'></div>
 <script type="text/javascript">
-/*<![CDATA[*/
+/*SHOPIFY*/
 (function () {
   var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
   if (window.ShopifyBuy) {
@@ -200,7 +200,7 @@
     });
   }
 })();
-/*]]>*/
+/*SHOPIFY*/
 </script>
     </div>
 
@@ -226,99 +226,284 @@
 
 <div class="gallery" id="gallery">
 
-  <div class="gallery-controls">
-    <button id="prev" class="icon-btn">
-      <img src="buttons/arrowbackward.png">
-    </button>
+    <img id="slide" src="images/ilikemanga0.png">
 
-  <a href="comics.html" class="icon-btn home-btn">
-  <img src="buttons/home.gif">
-  <span class="home-label">home</span>
-</a>
+    <button id="fullscreenBtn" class="fullscreen-btn icon-btn">
+    <img 
+      class="fullscreen-normal" 
+      src="buttons/fullscreen.png" 
+      alt="Fullscreen">
 
-    <button id="next" class="icon-btn">
-      <img src="buttons/arrowforward.png">
-    </button>
-  </div>
+    <img 
+      class="fullscreen-hover" 
+      src="buttons/fullscreen_hover.png" 
+      alt="Fullscreen">
 
-  <img id="slide" src="images/ilikemanga0.png">
+    <span class="fullscreen-label">fullscreen</span>
+</button>
 
 </div>
 
+<div id="lightbox">
+
+    <span id="closeLightbox">&times;</span>
+
+    <img id="lightboxImage">
+
+</div>
 <script>
 const images = [
-  "images/ilikemanga0.png",
-  "images/ilikemanga1.png",
-  "images/ilikemanga2.png",
-  "images/ilikemanga3.png"
+    "images/ilikemanga0.png",
+    "images/ilikemanga1.png",
+    "images/ilikemanga2.png",
+    "images/ilikemanga3.png"
 ];
 
 let index = 0;
+
 const slide = document.getElementById("slide");
 
-function showImage(i) {
-  index = (i + images.length) % images.length;
-  slide.src = images[index];
+
+function showImage(i){
+
+    index = (i + images.length) % images.length;
+
+    slide.src = images[index];
+
 }
 
-/* NAV FUNCTIONS */
-function nextImage() {
-  showImage(index + 1);
+
+function nextImage(){
+
+    showImage(index + 1);
+
 }
 
-function prevImage() {
-  showImage(index - 1);
+
+function prevImage(){
+
+    showImage(index - 1);
+
 }
 
-/* BUTTONS */
-document.getElementById("next").addEventListener("click", nextImage);
-document.getElementById("prev").addEventListener("click", prevImage);
 
-/* IMAGE CLICK (left = prev, right = next) */
-slide.addEventListener("click", (e) => {
-  const rect = slide.getBoundingClientRect();
-  const x = e.clientX - rect.left;
+/* click image */
 
-  if (x < rect.width / 2) {
-    prevImage();
-  } else {
-    nextImage();
-  }
+slide.addEventListener("click", (e)=>{
+
+    const width = slide.clientWidth;
+
+    if(e.offsetX < width / 2){
+
+        prevImage();
+
+    }else{
+
+        nextImage();
+
+    }
+
 });
 
-/* SWIPE */
+
+/* swipe */
+
 let startX = 0;
 
-slide.addEventListener("touchstart", (e) => {
-  startX = e.touches[0].clientX;
+
+slide.addEventListener("touchstart",(e)=>{
+
+    startX = e.touches[0].clientX;
+
 });
 
-slide.addEventListener("touchend", (e) => {
-  let endX = e.changedTouches[0].clientX;
-  let diff = startX - endX;
 
-  const threshold = 50;
+slide.addEventListener("touchend",(e)=>{
 
-  if (diff > threshold) {
-    nextImage(); // swipe left
-  } else if (diff < -threshold) {
-    prevImage(); // swipe right
-  }
+    let endX = e.changedTouches[0].clientX;
+
+    let distance = startX - endX;
+
+
+    if(distance > 50){
+
+        nextImage();
+
+    }
+
+
+    if(distance < -50){
+
+        prevImage();
+
+    }
+
 });
 
-/* SCROLL TO GALLERY (cover image click) */
-document.addEventListener("DOMContentLoaded", function () {
-  const trigger = document.getElementById("scrollToGallery");
-  const target = document.getElementById("gallery");
 
-  if (trigger && target) {
-    trigger.addEventListener("click", () => {
-      target.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
+
+/* LIGHTBOX */
+
+
+const fullscreenBtn = document.getElementById("fullscreenBtn");
+
+const lightbox = document.getElementById("lightbox");
+
+const lightboxImage = document.getElementById("lightboxImage");
+
+const closeLightbox = document.getElementById("closeLightbox");
+
+
+function updateLightbox(){
+
+    lightboxImage.src = images[index];
+
+}
+
+
+
+fullscreenBtn.addEventListener("click",()=>{
+
+    updateLightbox();
+
+    lightbox.style.display = "flex";
+
+});
+
+
+
+closeLightbox.addEventListener("click",()=>{
+
+    lightbox.style.display = "none";
+
+});
+
+
+
+/* CLICK LEFT OR RIGHT SIDE */
+
+lightboxImage.addEventListener("click",(e)=>{
+
+    const width = lightboxImage.clientWidth;
+
+
+    if(e.offsetX < width / 2){
+
+        prevImage();
+
+    } else {
+
+        nextImage();
+
+    }
+
+
+    updateLightbox();
+
+});
+
+
+
+/* SWIPE */
+
+let lightStartX = 0;
+
+
+lightboxImage.addEventListener("touchstart",(e)=>{
+
+    lightStartX = e.touches[0].clientX;
+
+});
+
+
+lightboxImage.addEventListener("touchend",(e)=>{
+
+    let lightEndX = e.changedTouches[0].clientX;
+
+    let distance = lightStartX - lightEndX;
+
+
+    if(distance > 50){
+
+        nextImage();
+
+    }
+
+
+    if(distance < -50){
+
+        prevImage();
+
+    }
+
+
+    updateLightbox();
+
+});
+
+
+
+/* KEYBOARD */
+
+document.addEventListener("keydown",(e)=>{
+
+
+    if(lightbox.style.display !== "flex") return;
+
+
+    if(e.key === "ArrowRight"){
+
+        nextImage();
+
+        updateLightbox();
+
+    }
+
+
+    if(e.key === "ArrowLeft"){
+
+        prevImage();
+
+        updateLightbox();
+
+    }
+
+
+    if(e.key === "Escape"){
+
+        lightbox.style.display = "none";
+
+    }
+
+
+});
+
+
+
+/* CLICK OUTSIDE IMAGE CLOSES */
+
+lightbox.addEventListener("click",(e)=>{
+
+    if(e.target === lightbox){
+
+        lightbox.style.display = "none";
+
+    }
+
+});
+
+/* SCROLL COVER IMAGE TO GALLERY */
+
+const trigger = document.getElementById("scrollToGallery");
+const target = document.getElementById("gallery");
+
+trigger.addEventListener("click",()=>{
+
+    target.scrollIntoView({
+        behavior:"smooth",
+        block:"start"
     });
-  }
+
 });
 </script>
 

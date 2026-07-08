@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>I LIKE MANGA</title>
+    <title>Onion Ring</title>
 
     <link rel="stylesheet" href="styles/style_comics_individual.css" />
     <link rel="icon" type="image/x-icon" href="images/star.ico" />
@@ -63,22 +63,31 @@
 
 <div class="gallery" id="gallery">
 
-  <div class="gallery-controls">
-    <button id="prev" class="icon-btn">
-      <img src="buttons/arrowbackward.png">
-    </button>
-
-  <a href="comics.html" class="icon-btn home-btn">
-  <img src="buttons/home.gif">
-  <span class="home-label">home</span>
-</a>
-
-    <button id="next" class="icon-btn">
-      <img src="buttons/arrowforward.png">
-    </button>
-  </div>
+  
 
   <img id="slide" src="images/onion1.jpg">
+
+    <button id="fullscreenBtn" class="fullscreen-btn icon-btn">
+    <img 
+      class="fullscreen-normal" 
+      src="buttons/fullscreen.png" 
+      alt="Fullscreen">
+
+    <img 
+      class="fullscreen-hover" 
+      src="buttons/fullscreen_hover.png" 
+      alt="Fullscreen">
+
+    <span class="fullscreen-label">fullscreen</span>
+</button>
+
+</div>
+
+<div id="lightbox">
+
+    <span id="closeLightbox">&times;</span>
+
+    <img id="lightboxImage">
 
 </div>
 
@@ -91,58 +100,237 @@ const images = [
 ];
 
 let index = 0;
+
 const slide = document.getElementById("slide");
 
-function showImage(i) {
-  index = (i + images.length) % images.length;
-  slide.src = images[index];
+
+function showImage(i){
+
+    index = (i + images.length) % images.length;
+
+    slide.src = images[index];
+
 }
 
-/* NAV FUNCTIONS */
-function nextImage() {
-  showImage(index + 1);
+
+function nextImage(){
+
+    showImage(index + 1);
+
 }
 
-function prevImage() {
-  showImage(index - 1);
+
+function prevImage(){
+
+    showImage(index - 1);
+
 }
 
-/* BUTTONS */
-document.getElementById("next").addEventListener("click", nextImage);
-document.getElementById("prev").addEventListener("click", prevImage);
 
-/* IMAGE CLICK (left = prev, right = next) */
-slide.addEventListener("click", (e) => {
-  const rect = slide.getBoundingClientRect();
-  const x = e.clientX - rect.left;
+/* click image */
 
-  if (x < rect.width / 2) {
-    prevImage();
-  } else {
-    nextImage();
-  }
+slide.addEventListener("click", (e)=>{
+
+    const width = slide.clientWidth;
+
+    if(e.offsetX < width / 2){
+
+        prevImage();
+
+    }else{
+
+        nextImage();
+
+    }
+
 });
 
-/* SWIPE */
+
+/* swipe */
+
 let startX = 0;
 
-slide.addEventListener("touchstart", (e) => {
-  startX = e.touches[0].clientX;
+
+slide.addEventListener("touchstart",(e)=>{
+
+    startX = e.touches[0].clientX;
+
 });
 
-slide.addEventListener("touchend", (e) => {
-  let endX = e.changedTouches[0].clientX;
-  let diff = startX - endX;
 
-  const threshold = 50;
+slide.addEventListener("touchend",(e)=>{
 
-  if (diff > threshold) {
-    nextImage(); // swipe left
-  } else if (diff < -threshold) {
-    prevImage(); // swipe right
-  }
+    let endX = e.changedTouches[0].clientX;
+
+    let distance = startX - endX;
+
+
+    if(distance > 50){
+
+        nextImage();
+
+    }
+
+
+    if(distance < -50){
+
+        prevImage();
+
+    }
+
 });
 
+
+
+/* LIGHTBOX */
+
+
+const fullscreenBtn = document.getElementById("fullscreenBtn");
+
+const lightbox = document.getElementById("lightbox");
+
+const lightboxImage = document.getElementById("lightboxImage");
+
+const closeLightbox = document.getElementById("closeLightbox");
+
+
+function updateLightbox(){
+
+    lightboxImage.src = images[index];
+
+}
+
+
+
+fullscreenBtn.addEventListener("click",()=>{
+
+    updateLightbox();
+
+    lightbox.style.display = "flex";
+
+});
+
+
+
+closeLightbox.addEventListener("click",()=>{
+
+    lightbox.style.display = "none";
+
+});
+
+
+
+/* CLICK LEFT OR RIGHT SIDE */
+
+lightboxImage.addEventListener("click",(e)=>{
+
+    const width = lightboxImage.clientWidth;
+
+
+    if(e.offsetX < width / 2){
+
+        prevImage();
+
+    } else {
+
+        nextImage();
+
+    }
+
+
+    updateLightbox();
+
+});
+
+
+
+/* SWIPE */
+
+let lightStartX = 0;
+
+
+lightboxImage.addEventListener("touchstart",(e)=>{
+
+    lightStartX = e.touches[0].clientX;
+
+});
+
+
+lightboxImage.addEventListener("touchend",(e)=>{
+
+    let lightEndX = e.changedTouches[0].clientX;
+
+    let distance = lightStartX - lightEndX;
+
+
+    if(distance > 50){
+
+        nextImage();
+
+    }
+
+
+    if(distance < -50){
+
+        prevImage();
+
+    }
+
+
+    updateLightbox();
+
+});
+
+
+
+/* KEYBOARD */
+
+document.addEventListener("keydown",(e)=>{
+
+
+    if(lightbox.style.display !== "flex") return;
+
+
+    if(e.key === "ArrowRight"){
+
+        nextImage();
+
+        updateLightbox();
+
+    }
+
+
+    if(e.key === "ArrowLeft"){
+
+        prevImage();
+
+        updateLightbox();
+
+    }
+
+
+    if(e.key === "Escape"){
+
+        lightbox.style.display = "none";
+
+    }
+
+
+});
+
+
+
+/* CLICK OUTSIDE IMAGE CLOSES */
+
+lightbox.addEventListener("click",(e)=>{
+
+    if(e.target === lightbox){
+
+        lightbox.style.display = "none";
+
+    }
+
+});
 /* SCROLL TO GALLERY (cover image click) */
 document.addEventListener("DOMContentLoaded", function () {
   const trigger = document.getElementById("scrollToGallery");
