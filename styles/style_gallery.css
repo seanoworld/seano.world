@@ -1,0 +1,197 @@
+img{
+    max-width: 100%;       /* Prevents stretching horizontally */
+  max-height: 80vh;      /* Restricts height to 80% of the screen height */
+  object-fit: contain;   /* Scales down the full image without cropping it */
+  display: block;        /* Removes inline white-space gaps */
+  margin: 0 auto;        /* Centers it within the modal container */
+}
+
+.wrapper {
+  margin: 20px;
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3rem;
+  background-color: white;
+}
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.intro {
+    flex:1;
+    background-color: white;
+}
+
+body {
+position: relative;
+  background-image: url("back.png");
+  background-position: center top;
+  background-size: contain;
+  font-family: "Roboto Mono", monospace;
+  overflow-x: hidden;
+}
+
+.buttons {
+    position: absolute;
+ top: 80%;
+  right: 80px;
+  width: 200px;
+  height: 100px;
+    display: flex;
+padding: 10px;
+justify-content: center;}
+
+.buttons img {
+    width: 50px;
+    height: auto;
+}
+
+.back,
+.home,
+.forward {
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-text {
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+  margin-top: 4px;
+} 
+.back {
+    padding: 20px;
+    justify-content: center;
+    width: 20%;
+}   
+.forward {
+    padding: 20px;
+    justify-content: center;
+    width: 20%;
+}   
+.back img,
+.forward img {
+  width: 20px;   /* adjust to taste */
+  height: auto;
+    transition: transform 0.1s ease;
+
+}
+.back img:active,
+.forward img:active {
+  transform: scale(0.9);
+}
+.back img:hover,
+.forward img:hover {
+  filter: brightness(0) saturate(100%) invert(16%) sepia(40%)
+          saturate(7494%) hue-rotate(356deg)
+          brightness(98%) contrast(118%);
+}
+/* The Modal (background) */
+.modal {
+   display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.9);
+  justify-content: center;
+  align-items: center;
+
+}
+
+/* Modal content (image) */
+.modal-content {
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+}
+
+.modal-content img {
+  max-height: 80vh; /* Keeps the image within 80% of the screen height */
+  width: auto;      /* Allows the width to scale proportionally */
+}
+
+@keyframes zoomIn {
+  from {transform: scale(0.6);}
+  to {transform: scale(1);}
+}
+
+.modal.show {
+  display: flex;
+  opacity: 1;
+}
+@media (max-width: 768px) {
+  .back img,
+  .forward img {
+    width: 30px;
+    height: auto;
+  }
+    .home img {
+    width: 50px;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+
+    .wrapper {
+        flex-direction: column;
+        gap: 2rem;
+        height: auto;
+        min-height: auto;
+        padding: 20px;
+    }
+
+    .buttons {
+        position: static;
+        width: 100%;
+        height: auto;
+
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+
+        margin-top: 1rem;
+    }
+
+    .buttons img {
+        max-width: 50px;
+        height: auto;
+    }
+
+    .intro {
+        width: 100%;
+        text-align: center;
+    }
+  
+    
+}
+
+@media (max-width: 767px) {
+  .modal {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .modal-content {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .modal-content img {
+    display: none !important;
+  }
+}
