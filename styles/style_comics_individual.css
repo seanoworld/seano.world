@@ -120,9 +120,13 @@ body {
 }
 .intro {
     flex: 1;
-    max-width: 500px;   /* keeps text column controlled */
+    max-width: 500px;
     background-color: white;
     align-self: flex-start;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 500px;
 }
 
 .gallery {
@@ -138,17 +142,18 @@ body {
   align-items: center;
 }
 .product-actions {
+    margin-top: auto;
+
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 30px;
-    margin-top: 30px;
 }
 
 .shopify-button-container {
-    display: flex;
-    justify-content: center;
+    min-height: 50px;
 }
+
 .home-btn {
     display: flex;
     flex-direction: column;
@@ -297,7 +302,12 @@ body {
     align-items: center;  }
 }
 
-
+@media (max-width: 600px) {
+    .product-actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
 footer {
   position: relative;
   bottom: 0;
