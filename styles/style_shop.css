@@ -206,3 +206,23 @@ footer {
   width: 90%;
 }
 
+@media (max-width: 600px) {
+
+    .nav_container {
+        width: 100%;
+    }
+
+    .navlist ul {
+        flex-direction: column;
+    }
+
+    .navlist li {
+        width: 100%;
+    }
+
+    .navlist li a {
+        font-size: 16px;
+        padding: 5px 0;
+    }
+
+}

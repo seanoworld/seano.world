@@ -39,6 +39,26 @@
     width: 100%;
 }
 
+/* this is for the nav bar */
+
+.navlist {
+    width: 100%;
+    max-width: 1300px;
+    margin: 15px auto;
+}
+
+.navlist ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+}
+
 .navlist li {
     flex: 1;
     text-align: center;
@@ -61,6 +81,38 @@
   width: 98%;
 
 }
+
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.flex-container div {
+  display: flex;
+  margin: 15px;
+}
+
+.nav_link.active{
+  color: red;
+}
+a:link {
+  color: white;
+  text-decoration: none;
+}
+a:visited {
+  color: white;
+}
+.navlist li a:hover {
+    color: red;
+    text-decoration: none;
+}
+
+a:active {
+  color: firebrick;
+  background-color: black;
+}
+/* this is for the nav bar */
 
 
 .flex-container {
@@ -297,4 +349,25 @@ footer {
     .contact-section {
         flex-direction: column;
     }
+}
+
+@media (max-width: 600px) {
+
+    .nav_container {
+        width: 100%;
+    }
+
+    .navlist ul {
+        flex-direction: column;
+    }
+
+    .navlist li {
+        width: 100%;
+    }
+
+    .navlist li a {
+        font-size: 16px;
+        padding: 5px 0;
+    }
+
 }
