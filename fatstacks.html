@@ -66,19 +66,32 @@
 
   <img id="slide" src="images/fat1.jpg">
 
+       <div class="gallery-tools">
+
     <button id="fullscreenBtn" class="fullscreen-btn icon-btn">
-    <img 
-      class="fullscreen-normal" 
-      src="buttons/fullscreen.png" 
-      alt="Fullscreen">
 
-    <img 
-      class="fullscreen-hover" 
-      src="buttons/fullscreen_hover.png" 
-      alt="Fullscreen">
+        <img class="fullscreen-normal"
+             src="buttons/fullscreen.png"
+             alt="Fullscreen">
 
-    <span class="fullscreen-label">fullscreen</span>
-</button>
+        <img class="fullscreen-hover"
+             src="buttons/fullscreen_hover.png"
+             alt="Fullscreen">
+
+        <span class="fullscreen-label">fullscreen</span>
+
+    </button>
+
+    <button id="topBtn" class="top-btn icon-btn">
+
+        <img class="top-normal"
+             src="buttons/up.png"
+             alt="uppies">
+
+       
+        <span class="top-label">uppies</span>
+
+    </button>
 
 </div>
 
@@ -349,7 +362,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-</script>
+/*UPPIES*/
+const topBtn = document.getElementById("topBtn");
 
+topBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+</script>
+</div>
     <footer>copyrights © 2026 Sean Mac. Images on this site may not be used or distributed without permission. Website built by me using html/css.</footer>
     </body>
