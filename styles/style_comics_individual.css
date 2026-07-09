@@ -594,3 +594,25 @@ footer {
     }
 
 }
+@media (max-width: 768px) {
+
+    .gallery {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #slide {
+        order: 1;
+    }
+
+    .gallery-tools {
+        order: 2;
+        margin-top: 20px;
+        width: 100%;
+
+        display: flex;
+        justify-content: flex-start; /* left-align buttons */
+        gap: 50px;
+    }
+}
