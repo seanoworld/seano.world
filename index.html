@@ -1412,6 +1412,16 @@ function closeArtLightbox() {
     }, 250);
 }
 
+/* Comic reader close button */
+comicCloseButton.addEventListener(
+    "click",
+    function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        closeArtLightbox();
+    }
+);
 
 function showPreviousArtwork() {
     currentArtworkIndex =
