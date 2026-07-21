@@ -6,7 +6,10 @@
   :root { font-family: InterVariable, sans-serif; }
 }
 
-/*HEADER*/
+/* =====================================
+   HEADER
+===================================== */
+
 #header {
   display: flex;
   margin: auto;
@@ -16,10 +19,18 @@
 #header img {
   width: 100%;
 }
-/*HEADER*/
 
 
-/* this is for the nav bar */
+/* =====================================
+   NAVIGATION
+===================================== */
+
+.nav_container {
+    width: 98%;
+    margin: auto;
+
+    background-color: rgba(0, 0, 0, 0.8);
+}
 
 .navlist {
     width: 100%;
@@ -32,31 +43,11 @@
     justify-content: space-evenly;
     align-items: center;
 
-    list-style: none;
+    width: 100%;
     margin: 0;
     padding: 0;
 
-    width: 100%;
-}
-
-/* this is for the nav bar */
-
-.navlist {
-    width: 100%;
-    max-width: 1300px;
-    margin: 15px auto;
-}
-
-.navlist ul {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-
     list-style: none;
-    margin: 0;
-    padding: 0;
-
-    width: 100%;
 }
 
 .navlist li {
@@ -68,84 +59,21 @@
     display: block;
     padding: 15px 0;
 
+    color: white;
+
+    font-family: "Roboto Mono", monospace;
     font-size: 25px;
     text-decoration: none;
-    color: white;
-    font-family: "Roboto Mono", monospace;
-}
-.nav_container {
-  margin: auto;
-  padding-top: 0%;
-  background-color:black;
-  opacity: 0.8;
-  width: 98%;
-
 }
 
-
-.flex-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.flex-container div {
-  display: flex;
-  margin: 15px;
-}
-
-.nav_link.active{
-  color: red;
-}
-a:link {
-  color: white;
-  text-decoration: none;
-}
-a:visited {
-  color: white;
-}
-.navlist li a:hover {
+.navlist li a:hover,
+.navlist li a.active {
     color: red;
-    text-decoration: none;
 }
 
-a:active {
-  color: firebrick;
-  background-color: black;
-}
-/* this is for the nav bar */
-
-
-.flex-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.flex-container div {
-  display: flex;
-  margin: 15px;
-}
-
-.nav_link.active{
-  color: red;
-}
-a:link {
-  color: white;
-  text-decoration: none;
-}
-a:visited {
-  color: white;
-}
-.navlist li a:hover {
-    color: red;
-    text-decoration: none;
-}
-
-a:active {
-  color: firebrick;
-  background-color: black;
-}
-/* this is for the nav bar */
-
+/* =====================================
+   BODY
+===================================== */
 
 body {
   background-image: url("back.png");
@@ -155,112 +83,437 @@ body {
     overflow-x: hidden;
 }
 
-.gallery_title{
-  margin: auto;
-  background-color:white;
-  width: 70%;
-  text-align: center;
-  padding: 1px;
-
-}
-.gallery_container{
-  margin: auto;
-  background-color: white;
-  width: 100%;
-}
-.row {
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-  padding: 0 4px;
-}
-
-/* Create four equal columns that sits next to each other */
-.column {
-  -ms-flex: 25%; /* IE10 */
-  flex: 20%;
-  max-width: 25%;
-  padding: 0 10px;
-}
-
-.column img {
-  margin-top: 20px;
-  vertical-align: middle;
-  width: 100%;
-  margin-bottom: 1rem;
-  transition: transform 0.4s ease;filter 0.4s ease;
-}
-
-
-
-.column img {
-  margin-top: 0px;
-  vertical-align: middle;
-  width: 100%;
-  margin-bottom: 1rem;
-  transition: transform 0.4s ease;filter 0.4s ease;
-}
-.image_container img {
-
-  object-fit: cover; /* Keeps image proportions intact */
-  transition: transform 0.4s ease, filter 0.4s ease; /* Makes the pop smooth */
-}
-
-.image_container:hover img {
-  transform: scale(1.1); /* Scales up by 10% */
-}
+/* =====================================
+   FOOTER
+===================================== */
 
 footer {
-  position: relative;
-  bottom: 0;
-  left: 0;
-  width: 90;
-  color: white;
-  background-color: black;
-  padding: 8px;
-  text-align: center;
-  z-index: 1000;
-  margin: auto;
-  width: 90%;
+    position: relative;
+    z-index: 1000;
+
+    width: 90%;
+    margin: auto;
+    padding: 8px;
+
+    color: white;
+    background-color: black;
+
+    text-align: center;
 }
 
 
 
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-  .column {
-    -ms-flex: 50%;
-    flex: 50%;
-    max-width: 50%;
-  }
+.portfolio_layout {
+
+    width: 90%;
+    max-width: 1400px;
+
+    margin: 40px auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    align-items: start;
+
+    gap: 30px;
+
+}
+.right_column {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+
+    min-width: 0;
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    -ms-flex: 100%;
-    flex: 100%;
-    max-width: 100%;
-  }
+.reusable-gallery {
+    position: relative;
+
+    overflow: hidden;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
+
+.gallery-title {
+    position: relative;
+    z-index: 3;
+
+    margin: 0;
+    padding: 12px 16px;
+
+    font-family: "Roboto Mono", monospace;
+    font-size: 18px;
+    font-weight: 500;
+
+    background: white;
+}
+
+.reusable-gallery .gallery_item {
+    transition: opacity 0.2s ease;
+}
+
+
+.reusable-gallery .fullscreen_button {
+    position: absolute;
+
+    right: 20px;
+    bottom: 20px;
+
+    z-index: 20;
+}
+
+.reusable-gallery.expanded .fullscreen_button {
+    position: fixed;
+
+    right: 45px;
+    bottom: 40px;
+}
+
+.left_column {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 30px;
+    height: 100%;
+
 }
 
 
 
-/*comic gallery containers*/
-.castle_container {
-  background-color: white;
-  margin: auto;
-  width: 90%;
-  padding: 50px;
-  text-align: center;
+/* ALL WHITE BOXES */
+
+.featured_container,
+
+.art_gallery_container {
+    position: relative;
+
+    background-color: white;
+
+    border-radius: 25px;
+
+    padding: 30px;
+
+    box-sizing: border-box;
+
 }
 
-.castle_container img{
-  width: 40%;
-  padding: 10px;
+.comic_container{
+     background-color: white;
+
+    border-radius: 25px;
+
+    padding: 10px;
+
+    box-sizing: border-box;
+
 }
 
+
+/* FEATURED */
+
+.featured_container img {
+
+    width: 100%;
+    display: block;
+    transition: transform .4s ease;
+
+    
+
+}
+.featured_container img:hover {
+      transform: scale(1.05);
+
+}
+
+.featured_container p {
+
+    text-align: center;
+
+    font-family: "Roboto Mono", monospace;
+
+    margin: 15px 0 0;
+
+    
+}
+.featured-artwork {
+    cursor: pointer;
+}
+.featured_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 15px;
+    gap: 20px;
+}
+
+
+.print_info {
+    color: #888;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+
+.color_info {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 20px;
+    row-gap: 4px;
+
+    font-size: 14px;
+}
+.color_info .brightred {
+    color: #F15060;
+}
+
+.color_info .lightteal {
+    color: #009DA5;
+}
+
+.color_info .black {
+    color: #000000;
+}
+
+.color_info .yellow {
+    color: #FFE800;
+}
+
+
+/* COMICS */
+
+/* COMIC SLIDESHOW */
+
+.comic_gallery{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:100%;
+
+    height:400px;           /* make taller if you want larger images */
+
+    overflow:hidden;
+
+    background:white;
+
+}
+
+.comic_gallery img{
+    padding-top: 0%;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:contain;
+
+    display:block;
+
+    cursor:pointer;
+
+    transition:opacity .35s ease;
+
+}
+
+
+
+/* =====================================
+   HOMEPAGE ART GALLERY
+===================================== */
+
+/* Outer white gallery box */
+.art_gallery_container {
+    position: relative;
+    align-self: start;
+
+    min-width: 0;
+    min-height: 0;
+
+    padding: 30px;
+padding-bottom: 90px;
+
+    background: white;
+    border-radius: 25px;
+
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Masonry grid with left-to-right ordering */
+.art_gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    /* Small invisible rows used to calculate masonry height */
+    grid-auto-rows: 8px;
+
+    column-gap: 20px;
+    row-gap: 0;
+
+    width: 100%;
+    align-items: start;
+
+    overflow: visible;
+    cursor: pointer;
+}
+
+.gallery_item {
+    width: 100%;
+    margin: 0 0 20px;
+
+    /* JavaScript will set grid-row-end */
+    break-inside: auto;
+}
+
+.gallery_item img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+
+    transition: transform 0.3s ease;
+}
+
+
+
+.gallery_item:hover img {
+    transform: scale(1.04);
+}
+
+/* Subtle fade above the fullscreen button */
+.art_gallery_container::after {
+    content: "";
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    height: 150px;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.2) 30%,
+        rgba(255, 255, 255, 0.7) 70%,
+        rgba(255, 255, 255, 1) 100%
+    );
+
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* Fullscreen button */
+.fullscreen_button {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+
+    z-index: 30;
+
+    width: 50px;
+    height: 50px;
+
+    padding: 0;
+
+    background: none;
+    border: none;
+
+    cursor: pointer;
+}
+
+.fullscreen_button img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    transition: transform 0.2s ease;
+}
+
+.fullscreen_button:hover img {
+    transform: scale(0.92);
+}
+
+/* Prevent the page behind fullscreen from scrolling */
+body.gallery-open {
+    overflow: hidden;
+}
+
+/* Dark background behind fullscreen gallery */
+.galleryBackdrop {
+    position: fixed;
+    inset: 0;
+
+    z-index: 6000;
+
+    visibility: hidden;
+    opacity: 0;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    transition:
+        opacity 0.2s ease,
+        visibility 0.2s ease;
+}
+
+.galleryBackdrop.visible {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.art_gallery_container.expanded {
+    position: fixed;
+
+    top: 20px;
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+
+    z-index: 6001;
+
+    width: auto;
+    height: calc(100vh - 40px) !important;
+    max-height: calc(100vh - 40px) !important;
+
+    padding: 70px 40px 40px;
+    box-sizing: border-box;
+
+    overflow-x: hidden !important;
+    overflow-y: scroll !important;
+
+    background: white;
+    border-radius: 25px;
+}
+/* Remove the bottom fade in fullscreen */
+.art_gallery_container.expanded::after {
+    display: none;
+}
+
+/* More columns in fullscreen */
+.art_gallery_container.expanded .art_gallery {
+    
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+
+    width: 100%;
+    height: auto !important;
+    max-height: none !important;
+
+    overflow: visible;
+}
 
 
 
@@ -276,7 +529,264 @@ footer {
 /*GALLERY BUTTON_RACCOON*/
 
 
+/* =====================================
+   ART IMAGE LIGHTBOX
+===================================== */
 
+.art-lightbox {
+    position: fixed;
+    inset: 0;
+
+    z-index: 7000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 35px;
+    box-sizing: border-box;
+
+    background: rgba(0, 0, 0, 0.68);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+}
+
+.art-lightbox.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.art-lightbox-panel {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    width: min(1200px, 92vw);
+    height: min(700px, 88vh);
+
+    background: white;
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    box-shadow: 0 25px 90px rgba(0,0,0,.45);
+}
+
+.art-lightbox-image-area {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 35px;
+    box-sizing: border-box;
+
+    background: #f2f2f2;
+
+    overflow: hidden;
+}
+
+.art-lightbox-image-area::before {
+    content: "";
+
+    position: absolute;
+
+    width: calc(100% - 70px);
+    height: calc(100% - 70px);
+
+    background: white;
+
+    border-radius: 4px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+.art-lightbox-image-area img {
+    position: relative;
+    z-index: 1;
+
+    display: block;
+
+    width: auto;
+    height: auto;
+
+    max-width: calc(100% - 90px);
+    max-height: calc(100% - 90px);
+
+    object-fit: contain;
+}
+
+.art-lightbox-info {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+    min-height: 0;
+
+    padding: 40px;
+    box-sizing: border-box;
+
+    border-left: 1px solid #e7e7e7;
+
+    font-family: "Roboto Mono", monospace;
+
+    overflow: hidden;
+}
+
+.art-lightbox-text {
+    flex: 1;
+    min-height: 0;
+
+    overflow-y: auto;
+
+    padding-right: 8px;
+}
+
+.art-lightbox-info h2 {
+    margin: 0 0 10px;
+
+    font-size: clamp(22px, 2.5vw, 36px);
+    line-height: 1.15;
+}
+
+.art-lightbox-year {
+    margin: 0 0 30px;
+
+    color: #888;
+    font-size: 14px;
+}
+
+.art-lightbox-description {
+    margin: 0;
+
+    font-size: 15px;
+    line-height: 1.7;
+
+    white-space: pre-line;
+}
+/* Production information above the controls */
+
+.art-lightbox-production {
+    flex-shrink: 0;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+    gap: 20px;
+
+    width: 100%;
+
+    margin-top: 20px;
+    padding-top: 18px;
+    padding-bottom: 8px;
+
+}
+
+.art-lightbox-process {
+    margin: 0;
+
+    color: #888;
+
+    font-family: "Roboto Mono", monospace;
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+.art-lightbox-colors {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    column-gap: 14px;
+    row-gap: 4px;
+
+    justify-content: end;
+}
+
+.art-lightbox-color {
+    margin: 0;
+
+    font-family: "Roboto Mono", monospace;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+.art-lightbox-controls {
+    flex-shrink: 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 44px);
+    justify-content: end;
+    gap: 12px;
+
+    width: 100%;
+
+    margin-top: 25px;
+    padding-top: 20px;
+
+    border-top: 1px solid #e7e7e7;
+}
+.lightbox-control-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 44px;
+    height: 44px;
+
+    margin: 0;
+    padding: 7px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        background-color 0.15s ease;
+}
+.lightbox-control-button img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    pointer-events: none;
+}
+.lightbox-control-button:hover {
+    transform: scale(1.08);
+    background-color: #f1f1f1;
+}
+
+.lightbox-control-button:active {
+    transform: scale(0.94);
+}
+/* Make gallery images feel clickable */
+.art_gallery .gallery_item img {
+    cursor: pointer;
+}
+
+/* Prevent background scrolling when lightbox is open */
+body.lightbox-open {
+    overflow: hidden;
+}
+
+
+/* =====================================
+   ART IMAGE LIGHTBOX END
+===================================== */
 
 /*CONTANT AND FACE*/
 .contact_container{
@@ -343,31 +853,340 @@ footer {
     width: fit-content;
     padding: 10px 20px;
 }
+/*CONTANT AND FACE END*/
 
 
-@media (max-width: 768px) {
-    .contact-section {
-        flex-direction: column;
-    }
+/* COMIC CAROUSEL */
+.horizontal_gallery_container{
+
+    width:100%;
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:25px;
+
+    box-sizing:border-box;
+
+    display:flex;
+    
+    flex: 1;
+
+    min-height: 260px;
+
+    align-items:center;
+
+    gap:20px;
+
 }
 
-@media (max-width: 600px) {
+.horizontal_gallery {
+    display: flex;
+    flex: 1;
 
-    .nav_container {
-        width: 100%;
-    }
+    gap: 0;
 
-    .navlist ul {
-        flex-direction: column;
-    }
+    overflow-x: hidden;
+    overflow-y: visible;
 
-    .navlist li {
-        width: 100%;
-    }
+    scroll-snap-type: x mandatory;
 
-    .navlist li a {
-        font-size: 16px;
-        padding: 5px 0;
-    }
+    min-width: 0;
+}
+
+.thumb {
+    flex: 0 0 100%;
+    width: 100%;
+
+    aspect-ratio: 4/3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+    margin: 0;
+
+    border: none;
+    background: transparent;
+
+    cursor: pointer;
+
+    scroll-snap-align: start;
+}
+
+.thumb img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    transition: transform 0.3s ease;
+}
+
+/* Original one-image comic carousel */
+.horizontal_gallery_container:not(.five-image-gallery)
+.thumb:hover img {
+    transform: scale(1.05);
+}
+
+/* Five-image carousel */
+.five-image-gallery .thumb:hover img {
+    transform: scale(1.1);
+}
+
+.five-image-gallery .thumb:first-child img {
+    transform-origin: center left;
+}
+
+.five-image-gallery .thumb:last-child img {
+    transform-origin: center right;
+}
+
+.gallery-arrow{
+
+    background:none;
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:0;
 
 }
+
+
+.gallery-arrow img{
+    width:30px;
+    display:block;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.gallery-arrow:hover img{
+    transform: scale(0.92);
+    filter: sepia(100%) saturate(500%) hue-rotate(-25deg) brightness(0.95);
+}
+
+.gallery-arrow:disabled{
+
+    opacity:.35;
+
+    pointer-events:none;
+
+}
+
+.horizontal_gallery{
+
+    scrollbar-width:none;
+
+}
+
+.horizontal_gallery::-webkit-scrollbar{
+
+    display:none;
+
+}
+/* COMIC CAROUSEL END */
+
+.five-image-gallery {
+    width: 90%;
+    max-width: 1400px;
+
+    margin: 50px auto;
+    padding: 45px 20px;
+
+    box-sizing: border-box;
+    overflow: visible;
+}
+
+.five-image-gallery .horizontal_gallery {
+    display: flex;
+    gap: 20px;
+
+    min-width: 0;
+
+    padding: 0;
+    margin: 0;
+
+    overflow-x: hidden;
+    overflow-y: visible;
+
+    scroll-snap-type: none;
+    scroll-padding: 0;
+}
+
+.five-image-gallery .thumb {
+    position: relative;
+    z-index: 1;
+
+    flex: 0 0 calc((100% - 80px) / 5);
+    width: calc((100% - 80px) / 5);
+    max-width: calc((100% - 80px) / 5);
+
+    aspect-ratio: 3 / 4;
+
+    padding: 0;
+    margin: 0;
+
+    box-sizing: border-box;
+    overflow: visible;
+
+    border: none;
+    background: transparent;
+
+    scroll-snap-align: none;
+}
+
+.five-image-gallery .thumb img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    object-position: center;
+
+    transition: transform 0.25s ease;
+}
+
+.five-image-gallery .thumb:hover {
+    z-index: 20;
+}
+
+.five-image-gallery .thumb:hover img {
+    transform: scale(1.08);
+}
+
+/* =====================================
+   COMIC READER INSIDE ART LIGHTBOX
+===================================== */
+
+.comic-reader-area {
+    display: none;
+
+    width: 100%;
+    height: 100%;
+
+    flex-direction: column;
+
+    min-width: 0;
+    min-height: 0;
+
+    background: white;
+}
+
+
+/* Change the existing lightbox panel into a comic reader */
+.art-lightbox.comic-mode .art-lightbox-panel {
+    display: flex;
+    flex-direction: column;
+
+    width: calc(100vw - 40px);
+    height: calc(100vh - 40px);
+
+    max-width: 1800px;
+    max-height: 1800px;
+
+    overflow: hidden;
+}
+
+
+/* Hide the normal artwork layout */
+.art-lightbox.comic-mode .art-lightbox-image-area,
+.art-lightbox.comic-mode .art-lightbox-info {
+    display: none;
+}
+
+
+/* Show the comic reader */
+.art-lightbox.comic-mode .comic-reader-area {
+    display: flex;
+}
+
+
+
+
+/* Vertically scrolling comic pages */
+.comic-reader-pages {
+    flex: 1;
+    min-height: 0;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+
+    padding: 25px;
+
+}
+.comic-reader-area{
+    position: relative;
+}
+.comic-close-button {
+    position: fixed;
+    top: 30px;
+    right: 70px;
+    z-index: 8000;
+
+    display: none;
+
+    width: 70px;
+    height: 70px;
+
+    padding: 5px;
+    border: none;
+    background: transparent;
+
+    cursor: pointer;
+}
+
+.art-lightbox.comic-mode .comic-close-button {
+    display: block;
+}
+
+.comic-close-button img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    pointer-events: none;
+
+    transition: transform 0.2s ease;
+}
+
+.comic-close-button:hover img {
+    transform: scale(0.9);
+}
+
+.comic-close-button:active img {
+    transform: scale(0.82);
+}
+
+/* Individual comic pages */
+.comic-reader-pages img {
+    display: block;
+
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+
+    margin: 0 auto 20px;
+
+    object-fit: contain;
+
+    background: white;
+}
+
+
+.comic-reader-pages img:last-child {
+    margin-bottom: 0;
+}
+
+
