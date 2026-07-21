@@ -12,8 +12,7 @@
   </head>
   <body>
     <div id="header">
-      <img src="images/head.png" />
-    </div>
+<a href="index.html"><img src="images/head.png" /></a>    </div>
    <div class="nav_container">
     <div class="navlist">
      <ul>
@@ -29,7 +28,8 @@
   <div class="wrapper">
 
  <div class="card profile">
-  <img src="images/castlevania5_cover.png" alt="Castlevania 5" id="scrollToGallery" style="cursor:pointer ;">
+  <img src="images/comicgallery/castlevania5_cover.png" alt="Castlevania 5" id="scrollToGallery" style="cursor:pointer ;">
+  <p style="text-align: center;">poke me</p>
 </div>
 
   <div class="card intro">
@@ -62,8 +62,22 @@
 
 <div class="gallery" id="gallery">
 
-  
-  <img id="slide" src="images/castlevania.jpg">
+<div class="gallery-display">
+
+    <button class="gallery-arrow" id="galleryPrev">
+        <img src="buttons/arrowbackward.png" alt="Previous">
+    </button>
+
+    <div class="image-frame">
+        <img id="slide" src="images/comicgallery/castle1.jpg">
+    </div>
+
+    <button class="gallery-arrow" id="galleryNext">
+        <img src="buttons/arrowforward.png" alt="Next">
+    </button>
+
+</div>
+
 
      <div class="gallery-tools">
 
@@ -104,30 +118,33 @@
 
 <script>
 const images = [
-  "images/castlevania.jpg",
-  "images/castle1.jpg",
-  "images/castle2.jpg",
-  "images/castle3.jpg",
-  "images/castle4.jpg",
-  "images/castle5.jpg",
-  "images/castle6.jpg",
-  "images/castle7.jpg",
-  "images/castle8.jpg",
-  "images/castle9.jpg",
-  "images/castle10.jpg",
-  "images/castle11.jpg",
-  "images/castle12.jpg",
-  "images/castle13.jpg",
-  "images/castle14.jpg",
-  "images/castle15.jpg",
-  "images/castle16.jpg",
-  "images/castle17.jpg",
+  "images/comicgallery/castlevania.jpg",
+  "images/comicgallery/castle1.jpg",
+  "images/comicgallery/castle2.jpg",
+  "images/comicgallery/castle3.jpg",
+  "images/comicgallery/castle4.jpg",
+  "images/comicgallery/castle5.jpg",
+  "images/comicgallery/castle6.jpg",
+  "images/comicgallery/castle7.jpg",
+  "images/comicgallery/castle8.jpg",
+  "images/comicgallery/castle9.jpg",
+  "images/comicgallery/castle10.jpg",
+  "images/comicgallery/castle11.jpg",
+  "images/comicgallery/castle12.jpg",
+  "images/comicgallery/castle13.jpg",
+  "images/comicgallery/castle14.jpg",
+  "images/comicgallery/castle15.jpg",
+  "images/comicgallery/castle16.jpg",
+  "images/comicgallery/castle17.jpg",
 ];
 
 let index = 0;
 
 const slide = document.getElementById("slide");
-
+const galleryPrev = document.getElementById("galleryPrev");
+const galleryNext = document.getElementById("galleryNext");
+galleryPrev.addEventListener("click", prevImage);
+galleryNext.addEventListener("click", nextImage);
 
 function showImage(i){
 

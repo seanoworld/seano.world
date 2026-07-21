@@ -12,8 +12,7 @@
   </head>
   <body>
     <div id="header">
-      <img src="images/head.png" />
-    </div>
+<a href="index.html"><img src="images/head.png" /></a>    </div>
    <div class="nav_container">
     <div class="navlist">
              <ul>
@@ -29,7 +28,8 @@
   <div class="wrapper">
 
  <div class="card profile">
-  <img src="images/hobbit1.jpg" alt="Hobbits" id="scrollToGallery" style="cursor:pointer ;">
+  <img src="images/comicgallery/hobbit1.jpg" alt="Hobbits" id="scrollToGallery" style="cursor:pointer ;">
+    <p style="text-align: center;">poke me</p>
 </div>
 
   <div class="card intro">
@@ -65,25 +65,49 @@
 
 <div class="gallery" id="gallery">
 
-  
+<div class="gallery-display">
 
-  <img id="slide" src="images/hobbit1.jpg">
+    <button class="gallery-arrow" id="galleryPrev">
+        <img src="buttons/arrowbackward.png" alt="Previous">
+    </button>
 
-    <button id="fullscreenBtn" class="fullscreen-btn icon-btn">
-    <img 
-      class="fullscreen-normal" 
-      src="buttons/fullscreen.png" 
-      alt="Fullscreen">
+    <div class="image-frame">
+        <img id="slide" src="images/comicgallery/hobbit1.jpg">
+    </div>
 
-    <img 
-      class="fullscreen-hover" 
-      src="buttons/fullscreen_hover.png" 
-      alt="Fullscreen">
-
-    <span class="fullscreen-label">fullscreen</span>
-</button>
+    <button class="gallery-arrow" id="galleryNext">
+        <img src="buttons/arrowforward.png" alt="Next">
+    </button>
 
 </div>
+
+
+  <div class="gallery-tools">
+
+    <button id="fullscreenBtn" class="fullscreen-btn icon-btn">
+
+        <img class="fullscreen-normal"
+             src="buttons/fullscreen.png"
+             alt="Fullscreen">
+
+        <img class="fullscreen-hover"
+             src="buttons/fullscreen_hover.png"
+             alt="Fullscreen">
+
+        <span class="fullscreen-label">fullscreen</span>
+
+    </button>
+
+    <button id="topBtn" class="top-btn icon-btn">
+
+        <img class="top-normal"
+             src="buttons/up.png"
+             alt="uppies">
+
+       
+        <span class="top-label">uppies</span>
+
+    </button>
 
 <div id="lightbox">
 
@@ -95,18 +119,22 @@
 
 <script>
 const images = [
-  "images/hobbit1.jpg",
-  "images/hobbit2.jpg",
-  "images/hobbit3.jpg",
-  "images/hobbit4.jpg",
-  "images/hobbit5.jpg",
-  "images/hobbit6.jpg"
+  "images/comicgallery/hobbit1.jpg",
+  "images/comicgallery/hobbit2.jpg",
+  "images/comicgallery/hobbit3.jpg",
+  "images/comicgallery/hobbit4.jpg",
+  "images/comicgallery/hobbit5.jpg",
+  "images/comicgallery/hobbit6.jpg",
+  "images/comicgallery/hobbit7.jpg"
 ];
 
 let index = 0;
 
 const slide = document.getElementById("slide");
-
+const galleryPrev = document.getElementById("galleryPrev");
+const galleryNext = document.getElementById("galleryNext");
+galleryPrev.addEventListener("click", prevImage);
+galleryNext.addEventListener("click", nextImage);
 
 function showImage(i){
 
@@ -335,21 +363,30 @@ lightbox.addEventListener("click",(e)=>{
     }
 
 });
-/* SCROLL TO GALLERY (cover image click) */
-document.addEventListener("DOMContentLoaded", function () {
-  const trigger = document.getElementById("scrollToGallery");
-  const target = document.getElementById("gallery");
 
-  if (trigger && target) {
-    trigger.addEventListener("click", () => {
-      target.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
+/* SCROLL COVER IMAGE TO GALLERY */
+
+const trigger = document.getElementById("scrollToGallery");
+const target = document.getElementById("gallery");
+
+trigger.addEventListener("click",()=>{
+
+    target.scrollIntoView({
+        behavior:"smooth",
+        block:"start"
     });
-  }
+
+});
+const topBtn = document.getElementById("topBtn");
+
+topBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 });
 </script>
-
+</div>
+</div>
     <footer>copyrights © 2026 Sean Mac. Images on this site may not be used or distributed without permission. Website built by me using html/css.</footer>
     </body>

@@ -12,8 +12,7 @@
   </head>
   <body>
     <div id="header">
-      <img src="images/head.png" />
-    </div>
+<a href="index.html"><img src="images/head.png" /></a>    </div>
    <div class="nav_container">
     <div class="navlist">
        <ul>
@@ -29,7 +28,8 @@
   <div class="wrapper">
 
  <div class="card profile">
-  <img src="images/howtohaveacat_cover.png" alt="How to Have a Cat" id="scrollToGallery" style="cursor:pointer ;">
+  <img src="images/comicgallery/howtohaveacat_cover.png" alt="How to Have a Cat" id="scrollToGallery" style="cursor:pointer ;">
+    <p style="text-align: center;">poke me</p>
 </div>
 
   <div class="card intro">
@@ -64,7 +64,22 @@
 
 <div class="gallery" id="gallery">
 
-  <img id="slide" src="images/howtocat1.jpg">
+<div class="gallery-display">
+
+    <button class="gallery-arrow" id="galleryPrev">
+        <img src="buttons/arrowbackward.png" alt="Previous">
+    </button>
+
+    <div class="image-frame">
+        <img id="slide" src="images/comicgallery/howtocat1.jpg">
+    </div>
+
+    <button class="gallery-arrow" id="galleryNext">
+        <img src="buttons/arrowforward.png" alt="Next">
+    </button>
+
+</div>
+
 
        <div class="gallery-tools">
 
@@ -105,16 +120,19 @@
 
 <script>
 const images = [
-  "images/howtocat1.jpg",
-  "images/howtocat2.jpg",
-  "images/howtocat4.jpg",
-  "images/howtocatx.jpg"
+  "images/comicgallery/howtocat1.jpg",
+  "images/comicgallery/howtocat2.jpg",
+  "images/comicgallery/howtocat4.jpg",
+  "images/comicgallery/howtocatx.jpg"
 ];
 
 let index = 0;
 
 const slide = document.getElementById("slide");
-
+const galleryPrev = document.getElementById("galleryPrev");
+const galleryNext = document.getElementById("galleryNext");
+galleryPrev.addEventListener("click", prevImage);
+galleryNext.addEventListener("click", nextImage);
 
 function showImage(i){
 

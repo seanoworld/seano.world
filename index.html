@@ -15,85 +15,851 @@
   </head>
   <body>
     <div id="header">
-      <img src="images/head.png" />
+      <a href="index.html"><img src="images/head.png" /></a>
     </div>
    <div class="nav_container">
     <div class="navlist">
       <ul>
-        <li><a href="blob.html" target="_self">blob</a></li>
+        <li><a href="blob.html" target="_self">blob    </a></li>
         <li><a href="index.html" target="_self" class="nav_link active">drawings</a></li>
         <li><a href="comics.html" target="_self">comics</a></li>
-        <li><a href="seano.html" target="_self">about</a></li>     
+        <li><a href="seano.html" target="_self">blob</a></li>     
          <li><a href="shop.html" target="_self">shop</a></li>
       </ul>
     </div>
     </div>
 
-    <div class="gallery_title">
-      <p>☃ SF 5130 Riso prints ☃</p>
-    </div>
-    <br>
-   <!-- <div class="gallery"> this was chat gpt helping me make the gallery work correectly on mobile....work in progress
-        <span class="image_container"><a target="_top" href="gallery_swallowtail.html"><img src="images/swallowtails.jpg" alt="swallowtails"></a></span>
- <span class="image_container"><a target="_top" href="gallery_pigs.html" ><img src="images/pigs.jpg" alt="piggies" ></a></span>
- <span class="image_container"><a target="_top" href="gallery_shark.html"><img src="images/sharkriz.jpg" alt="thoughtless shark"></a></span>
-  <span class="image_container"><a target="_top" href="gallery_karaoke.html"><img src="images/karaoke.jpg" alt="Bernice's Tavern Karaoke"></a></span>
-   <span class="image_container"><a target="_top" href="gallery_subway.html"><img src="images/subway.jpg"  alt="Chicago Red Line"></a></span>
-   <span class="image_container"><a target="_top" href="gallery_ puppydragon.html"><img src="images/puppydragon.jpg" alt="Puppy Dragon"></a></span>
-         <span class="image_container"><a target="_top" href="gallery_ufo.html"><img src="images/seanufo.jpg" alt="Hello"></a></span>
-      <span class="image_container"><a target="_top" href="gallery_nerds.html"><img src="images/nerds.jpg" alt="nerds"></a></span>
-      <span class="image_container"><a target="_top" href="gallery_jackalope.html"><img src="images/xmasjack1.jpg" alt="Jackalope Coffee and Tea House Holiday Menu"></a></span>
-       <span class="image_container"><a target="_top" href="gallery_skylark.html"><img src="images/skylark.jpg" alt="Skyark"></a></span>
 
-    </div>-->
-    <div class="gallery_container">
+
+<div class="portfolio_layout">
+
+    <!-- LEFT SIDE ----------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <div class="left_column">
+
+        <!-- FEATURED IMAGE -------------------------------------------------------------------------------------------------------------------------->
+        <section class="featured_container">
+<p class="print_info">☆ New Print for Sale ☆</p>
+           <img
+    src="images/riso/babybirds.png"
+    alt="Baby Birds"
+
+    data-title="Baby Birds"
+    data-year="2026"
+    data-info="Baby birds, you'll learn to fly one day."
+
+    data-process="printed using SF5130 Risograph"
+    data-colors="#F15060|#009DA5|#000000|#FFE800"
+
+    class="featured-artwork"
+>
+
+            <div class="featured_info">
+
+    <p class="print_info">
+        printed using SF5130
+    </p>
+
+    <div class="color_info">
+    <span class="brightred">#F15060</span>
+    <span class="lightteal">#009DA5</span>
+    <span class="black">#000000</span>
+    <span class="yellow">#FFE800</span>
+</div>
+
+</div>
+
+        </section>
+
+
+
+        <!-- ADS ----------------------------------------------------------------------------------------------------------------------------------------->
+
+<section class="comic_container">
+
    
-      <div class="row"> 
-   
-      <div class="column">
-      <span class="image_container"><a target="_top" href="gallery_swallowtail.html"><img src="images/swallowtails.jpg" alt="swallowtails"></a></span>
-      <span class="image_container"><a target="_top" href="gallery_subway.html"><img src="images/subway.jpg"  alt="Chicago Red Line"></a></span>
-      <span class="image_container"><a target="_top" href="gallery_jackalope.html"><img src="images/xmasjack1.jpg" alt="Jackalope Coffee and Tea House Holiday Menu"></a></span></div>
-    
-      <div class="column">
-      <span class="image_container"><a target="_top" href="gallery_pigs.html" ><img src="images/pigs.jpg" alt="piggies" ></a></span>
-      <span class="image_container"><a target="_top" href="gallery_ puppydragon.html"><img src="images/puppydragon.jpg" alt="Puppy Dragon"></a></span>
-      <span class="image_container"><a target="_top" href="gallery_skylark.html"><img src="images/skylark.jpg" alt="Skyark"></a></span></div>  
+
+    <div class="comic_gallery">
+
+        <img id="comicSlide"
+             src="images/ads/karaoke.png"
+             alt="Comic">
+
+    </div>
+ <h2 style="color: green; text-align:right; padding-right: 5px; ">
+        ☘ <span style="color:gray; font-family: monospace;">Ads</span> ☘
+    </h2>
+</section>
+
+
+<!--Comic Gallery---------------------------------------------------------------------------------------------------------------------------------------->
+
+<section class="horizontal_gallery_container">
+
+    <button class="gallery-arrow left">
+        <img src="buttons/arrowbackward.png" alt="Previous">
+    </button>
+
+ <div class="horizontal_gallery">
+
+    <button
+        class="thumb comic-cover"
+        type="button"
+        data-title="Comic One"
+        data-pages="
+            images/home_comics/loveisembarrasing/1.jpg|
+            images/home_comics/loveisembarrasing/2.jpg|
+            images/home_comics/loveisembarrasing/3.jpg|
+            images/home_comics/loveisembarrasing/4.jpg
+        "
+    >
+        <img
+            src="images/home_comics/loveisembarrasing/cover.jpg"
+            alt="Love is Embarrasing"
+        >
+    </button>
+
+
+    <button
+        class="thumb comic-cover"
+        type="button"
+        data-title="Comic Two"
+        data-pages="
+            images/home_comics/portland/1.jpg|
+            images/home_comics/portland/2.jpg
+        "
+    >
+        <img
+            src="images/home_comics/portland/cover.jpg"
+            alt="Comic Two"
+        >
+    </button>
+
+
+    <button
+        class="thumb comic-cover"
+        type="button"
+        data-title="Comic Three"
+        data-pages="
+            images/home_comics/waterbear/1.png|
+            images/home_comics/waterbear/2.png|
+            images/home_comics/waterbear/3.png|
+            images/home_comics/waterbear/4.png
+        "
+    >
+        <img
+            src="images/home_comics/waterbear/1.png"
+            alt="Comic Three"
+        >
+    </button>
+
+      <button
+        class="thumb comic-cover"
+        type="button"
+        data-title="Comic Four"
+        data-pages="
+            images/home_comics/hellonearth/1.jpg|
+            images/home_comics/hellonearth/2.jpg|
+            images/home_comics/hellonearth/3.jpg|
+            images/home_comics/hellonearth/4.jpg|
+            images/home_comics/hellonearth/5.jpg
+
+        "
+    >
+        <img
+            src="images/home_comics/hellonearth/cover.jpg"
+            alt="Comic Four"
+        >
+    </button>
+
+    <button
+        class="thumb comic-cover"
+        type="button"
+        data-title="Comic Five"
+        data-pages="
+            images/home_comics/yoga/1.png|
+            images/home_comics/yoga/2.png|
+            images/home_comics/yoga/3.png|
+            images/home_comics/yoga/4.png|
+            images/home_comics/yoga/5.png|
+            images/home_comics/yoga/6.png|
+            images/home_comics/yoga/7.png|
+            images/home_comics/yoga/8.png|
+            images/home_comics/yoga/9.png|
+            images/home_comics/yoga/10.png|
+            images/home_comics/yoga/11.png|
+            images/home_comics/yoga/12.png|
+            images/home_comics/yoga/13.png|
+            images/home_comics/yoga/14.png
+            
+
+        "
+    >
+        <img
+            src="images/home_comics/yoga/cover.png"
+            alt="Comic Five"
+        >
+    </button>
+
+     <button
+        class="thumb comic-cover"
+        type="button"
+        data-title="Comic Five"
+        data-pages="
+            images/home_comics/spaceman/1.jpg|
+            images/home_comics/spaceman/2.jpg|
+            images/home_comics/spaceman/3.jpg|
+            images/home_comics/spaceman/4.jpg|
+            images/home_comics/spaceman/5.jpg|
+            images/home_comics/spaceman/6.jpg
+
+            
+
+        "
+    >
+        <img
+            src="images/home_comics/spaceman/cover.jpg"
+            alt=""
+        >
+    </button>
+     
+
+</div>
+
+    <button class="gallery-arrow right">
+        <img src="buttons/arrowforward.png" alt="Next">
+    </button>
+
+</section>
+
+<!--Comic Gallery End------------------------------------------------------------------------------->
+
+    </div>
+<script>const comics = [
+    "images/ads/karaoke.png",
+    "images/ads/jack1.png",
+    "images/ads/dovetail.png",
+    "images/ads/openmic_sarahbella.png",
+    "images/ads/openmic_bill.png", 
+    "images/ads/cassposter.png",
+    "images/ads/marias_karaoke.png"
+];
+
+let currentComic = 0;
+
+const comicImage = document.getElementById("comicSlide");
+
+function showComic(index){
+
+    currentComic = (index + comics.length) % comics.length;
+
+    comicImage.src = comics[currentComic];
+}
+
+function nextComic(){
+    showComic(currentComic + 1);
+}
+
+let comicTimer = setInterval(nextComic, 5000);
+function restartTimer(){
+
+    clearInterval(comicTimer);
+
+    comicTimer = setInterval(nextComic,5000);
+
+}
+
+comicImage.addEventListener("click", () => {
+
+    nextComic();
+
+    restartTimer();
+
+});let startX = 0;
+
+comicImage.addEventListener("touchstart",(e)=>{
+    startX = e.touches[0].clientX;
+});
+
+comicImage.addEventListener("touchend",(e)=>{
+
+    let endX = e.changedTouches[0].clientX;
+
+    if(startX-endX>50){
+
+        nextComic();
+
+        restartTimer();
+
+    }
+
+    if(endX-startX>50){
+
+        showComic(currentComic-1);
+
+        restartTimer();
+
+    }
+
+});
+function showComic(index){
+
+    comicImage.style.opacity = 0;
+
+    setTimeout(()=>{
+
+        currentComic = (index + comics.length) % comics.length;
+
+        comicImage.src = comics[currentComic];
+
+        comicImage.style.opacity = 1;
+
+    },200);
+
+}
+</script>
+
+
+    <!-- RIGHT SIDE -->
+<div class="right_column">
+
+    <!-- RISOGRAPH PRINTS -->
+    <section
+        class="art_gallery_container reusable-gallery"
+        id="risoGallery"
+        data-collapsed-height="600"
+    >
+
+        <h2 class="gallery-title">
+            Risograph Prints
+        </h2>
+
+        <div class="art_gallery">
+
+            <!-- Move your Risograph artwork into this gallery -->
+
+            <div class="gallery_item">
+                <img
+                    src="images/riso/swallowtails.jpg"
+                    data-title="Swallowtails"
+                    data-year="2026"
+                    data-info="Every Summer, Adelaide grows dill, and every Summer she gets hungry Swallowtail caterpillars."
+                    data-process="printed using SF5130"
+                    data-colors="#F15060|#009DA5|#000000|#FFE800"
+                    alt="Swallowtails"
+                >
+            </div>
+
+            <div class="gallery_item">
+                <img
+                    src="images/riso/puppydragon.jpg"
+                    data-title="Puppy Dragon"
+                    data-year="2026"
+                    data-info="A random fun drawing of a puppy dragon turned into a Clifford the Dog Puppy Dragon."
+                    data-process="printed using SF5130"
+                    data-colors="#F15060|#009DA5|#000000|#FFE800"
+                    alt="Puppy Dragon"
+                >
+            </div>
+
+            <div class="gallery_item">
+                <img
+                    src="images/riso/pigs.jpg"
+                    data-title="Can I Have Some Oats, Brother?"
+                    data-year="2026"
+                    data-info="Fanart of the best meme on the internet."
+                    data-process="printed using SF5130"
+                    data-colors="#F15060|#009DA5|#000000|#FFE800"
+                    alt="Can I Have Some Oats, Brother?"
+                >
+            </div>
+
+            <div class="gallery_item">
+                <img
+                    src="images/riso/sharkriz.jpg"
+                    data-title="Sharkriz"
+                    data-year="2026"
+                    data-info="Sharks are like big, mindless, totally chill cats of the sea."
+                    data-process="printed using SF5130"
+                    data-colors="#F15060|#009DA5|#000000|#FFE800"
+                    alt="Sharkriz"
+                >
+            </div>
+             <div class="gallery_item">
+                <img
+                    src="images/riso/subway.jpg"
+                    data-title="Chinatown-Sox 35th Redline"
+                    data-year="2023"
+                    data-info="Inspired by the Red Line rides I'd take to and from my dishwasher job way up on the North Side."
+                    alt="Chinatown-Sox 35th Redline"
+                >
+            </div>
+
+             <div class="gallery_item">
+                <img
+                    src="images/riso/eatbirds.jpg"
+                    data-title="..."
+                    data-year="..."
+                    data-info="..."
+                    alt=""
+                >
+            </div>
+              <div class="gallery_item">
+                <img
+                    src="images/riso/nerds.jpg"
+                    data-title="..."
+                    data-year="..."
+                    data-info="..."
+                    alt=""
+                >
+            </div>
+              <div class="gallery_item">
+                <img
+                    src="images/riso/spread.jpg"
+                    data-title="Buppy Caveman"
+                    data-year="2021"
+                    data-info="Inside Cover Spread for Buppy Caveman comic"
+                    alt=""
+                >
+            </div>
+             <div class="gallery_item">
+                <img
+                    src="images/riso/seanufo.jpg"
+                    data-title="Seano's World"
+                    data-year="2026"
+                    data-info="..."
+                    alt=""
+                >
+            </div>
+            <div class="gallery_item">
+                <img
+                    src="images/riso/mmboy.jpg"
+                    data-title="Magic Moon Boy's New Friends"
+                    data-year="2026"
+                    data-info="..."
+                    alt=""
+                >
+            </div>
+        
+            <div class="gallery_item">
+                <img
+                    src="images/riso/karaoke.png"
+                    data-title="..."
+                    data-year="..."
+                    data-info="..."
+                    alt=""
+                >
+            </div>
+
+             <div class="gallery_item">
+                <img
+                    src="images/riso/openmic_bill.png"
+                    data-title="..."
+                    data-year="..."
+                    data-info="..."
+                    alt=""
+                >
+            </div>
+
+             <div class="gallery_item">
+                <img
+                    src="images/riso/jack1.png"
+                    data-title="..."
+                    data-year="..."
+                    data-info="..."
+                    alt=""
+                >
+            </div>
+
+            
+            
+             <div class="gallery_item">
+                <img
+                    src="images/riso/namji"
+                    data-title="..."
+                    data-year="..."
+                    data-info="..."
+                    alt=""
+                >
+            </div>
+             <div class="gallery_item">
+                <img
+                    src="images/riso/tuesday.png"
+                    data-title="..."
+                    data-year="..."
+                    data-info="..."
+                    alt=""
+                >
+            </div>
+             <div class="gallery_item">
+                <img
+                    src="images/riso/wheels.png"
+                    data-title="..."
+                    data-year="..."
+                    data-info="..."
+                    alt=""
+                >
+            </div>
+
+        </div>
+
+        <button
+            class="fullscreen_button gallery-toggle"
+            type="button"
+            aria-label="Show all Risograph prints"
+        >
+            <img
+                src="buttons/hold_button.png"
+                alt=""
+            >
+        </button>
+
+    </section>
+
+
+    <!-- ILLUSTRATION -->
+    <section
+        class="art_gallery_container reusable-gallery"
+        id="illustrationGallery"
+        data-collapsed-height="850"
+    >
+
+       
+
+        <div class="art_gallery">
+
+            <!-- Move your illustration artwork into this gallery -->
+
+           
+
+            
+ <div class="gallery_item">
+                <img
+                    src="images/home_gallery/weedmariopeach.png"
+                    data-title=""
+                    data-year=""
+                    data-info=""
+                    alt=""
+                >
+            </div>
+             <div class="gallery_item">
+                <img
+                    src="images/home_gallery/marianos.jpg"
+                    data-title=""
+                    data-year=""
+                    data-info=""
+                    alt=""
+                >
+            </div>
+            <div class="gallery_item">
+                <img
+                    src="images/home_gallery/basketball.jpg"
+                    data-title=""
+                    data-year=""
+                    data-info=""
+                    alt=""
+                >
+            </div> 
+            <div class="gallery_item">
+                <img
+                    src="images/home_gallery/spaceboy.png"
+                    data-title=""
+                    data-year=""
+                    data-info=""
+                    alt=""
+                >
+            </div>
+
+            <div class="gallery_item">
+                <img
+                    src="images/home_gallery/tree2.jpg"
+                    data-title=""
+                    data-year=""
+                    data-info=""
+                    alt=""
+                >
+            </div>
+
+            <div class="gallery_item">
+                <img
+                    src="images/home_gallery/subway2.jpg"
+                    data-title=""
+                    data-year=""
+                    data-info=""
+                    alt=""
+                >
+            </div>
+
+          
+
+         
+
+            
+              <div class="gallery_item">
+                <img
+                    src="images/home_gallery/skeletonandrat3.png"
+                    data-title=""
+                    data-year=""
+                    data-info=""
+                    alt=""
+                >
+            </div>
+              <div class="gallery_item">
+                <img
+                    src="images/home_gallery/good-day.png"
+                    data-title=""
+                    data-year=""
+                    data-info=""
+                    alt=""
+                >
+            </div>
+              <div class="gallery_item">
+                <img
+                    src="images/home_gallery/space.jpg"
+                    data-title=""
+                    data-year=""
+                    data-info=""
+                    alt=""
+                >
+            </div>
+              <div class="gallery_item">
+                <img
+                    src="images/home_gallery/juice.png"
+                    data-title=""
+                    data-year=""
+                    data-info=""
+                    alt=""
+                >
+            </div>
+              <div class="gallery_item">
+                <img
+                    src="images/home_gallery/lifesux.png"
+                    data-title=""
+                    data-year=""
+                    data-info=""
+                    alt=""
+                >
+            </div>
+              <div class="gallery_item">
+                <img
+                    src="images/home_gallery/golf.png"
+                    data-title=""
+                    data-year=""
+                    data-info=""
+                    alt=""
+                >
+            </div>
+              <div class="gallery_item">
+                <img
+                    src="images/home_gallery/direwolfandelf.png"
+                    data-title=""
+                    data-year=""
+                    data-info=""
+                    alt=""
+                >
+            </div>
+              <div class="gallery_item">
+                <img
+                    src="images/home_gallery/swamp_jamie.png"
+                    data-title=""
+                    data-year=""
+                    data-info=""
+                    alt=""
+                >
+            </div>
+              <div class="gallery_item">
+                <img
+                    src="images/home_gallery/virus.jpg"
+                    data-title=""
+                    data-year=""
+                    data-info=""
+                    alt=""
+                >
+            </div>
+             
+              <div class="gallery_item">
+                <img
+                    src="images/home_gallery/babysitter.png"
+                    data-title=""
+                    data-year=""
+                    data-info=""
+                    alt=""
+                >
+            </div>
+              <div class="gallery_item">
+                <img
+                    src="images/home_gallery/babysitter_scene.png"
+                    data-title=""
+                    data-year=""
+                    data-info=""
+                    alt=""
+                >
+            </div>
+
+
+           
+
+        </div>
+
+        <button
+            class="fullscreen_button gallery-toggle"
+            type="button"
+            aria-label="Show all illustrations"
+        >
+            <img
+                src="buttons/hold_button.png"
+                alt=""
+            >
+        </button>
+
+    </section>
+
+</div>
+
+</div>
+
+<!-- SECOND HORIZONTAL GALLERY wip-->
+<!---section class="horizontal_gallery_container five-image-gallery">
+
+    <button
+        class="gallery-arrow left"
+        type="button"
+        aria-label="Previous comics"
+    >
+        <img
+            src="buttons/arrowbackward.png"
+            alt=""
+        >
+    </button>
+
+    <div class="horizontal_gallery">
+
       
-      <div class="column">
-      <span class="image_container"><a target="_top" href="gallery_shark.html"><img src="images/sharkriz.jpg" alt="thoughtless shark"></a></span>
-      <span class="image_container"><a target="_top" href="gallery_ufo.html"><img src="images/seanufo.jpg" alt="Hello"></a></span></div>
-      
-      <div class="column">
-      <span class="image_container"><a target="_top" href="gallery_karaoke.html"><img src="images/karaoke.jpg" alt="Bernice's Tavern Karaoke"></a></span>
-      <span class="image_container"><a target="_top" href="gallery_nerds.html"><img src="images/nerds.jpg" alt="nerds"></a></span></div>
-      
-      </div>
-    
+        <button
+            class="thumb comic-cover"
+            type="button"
+            data-title="Swallowtails"
+            data-pages="
+                images/comicgallery/ilikemangacover.jpg|
+                images/swallowtails/page-02.jpg|
+                images/swallowtails/page-03.jpg|
+                images/swallowtails/page-04.jpg
+            "
+        >
+            <img
+                src="images/comicgallery/ilikemangacover.jpg"
+                alt="Read Swallowtails"
+            >
+        </button>
+
+        
+        <button
+            class="thumb comic-cover"
+            type="button"
+            data-title="I Like Manga"
+            data-pages="
+                images/manga/te1.jpg|
+                images/manga/te2.jpg|
+                images/manga/te3.jpg|
+                images/manga/te4.jpg|
+                images/manga/te5.jpg|
+                images/manga/te6.jpg
+            "
+        >
+            <img
+                src="images/comic-covers/manga-cover.jpg"
+                alt="Read I Like Manga"
+            >
+        </button>
+
+        
+        <button
+            class="thumb comic-cover"
+            type="button"
+            data-title="Comic Three"
+            data-pages="
+                images/comic-three/page-01.jpg|
+                images/comic-three/page-02.jpg|
+                images/comic-three/page-03.jpg
+            "
+        >
+            <img
+                src="images/comic-covers/comic-three-cover.jpg"
+                alt="Read Comic Three"
+            >
+        </button>
+
+       
+        <button
+            class="thumb comic-cover"
+            type="button"
+            data-title="Comic Four"
+            data-pages="
+                images/comic-four/page-01.jpg|
+                images/comic-four/page-02.jpg|
+                images/comic-four/page-03.jpg
+            "
+        >
+            <img
+                src="images/comic-covers/comic-four-cover.jpg"
+                alt="Read Comic Four"
+            >
+        </button>
+
+        
+        <button
+            class="thumb comic-cover"
+            type="button"
+            data-title="Comic Five"
+            data-pages="
+                images/comic-five/page-01.jpg|
+                images/comic-five/page-02.jpg|
+                images/comic-five/page-03.jpg
+            "
+        >
+            <img
+                src="images/comic-covers/comic-five-cover.jpg"
+                alt="Read Comic Five"
+            >
+        </button>
+
+        
+        <button
+            class="thumb comic-cover"
+            type="button"
+            data-title="Comic Six"
+            data-pages="
+                images/comic-six/page-01.jpg|
+                images/comic-six/page-02.jpg|
+                images/comic-six/page-03.jpg
+            "
+        >
+            <img
+                src="images/comic-covers/comic-six-cover.jpg"
+                alt="Read Comic Six"
+            >
+        </button>
+
     </div>
 
-        <!-- this is the cool page inside a page effect
-   <div class="column">
-      <span class="image_container"><a target="_top" href="images/.jpg"><img src="images/.jpg" alt=""></a></span>
-      <span class="image_container"><a target="_top" href="images/.jpg"><img src="images/.jpg" alt=""></a></span>
-      <span class="image_container"><a target="_top" href="images/.jpg"><img src="images/.jpg" alt=""></a></span>
-    </div>
-    </div>-->
-    <!--<div class="flex-container">
-      <div style="width: 90%; height: 900px; flex: grow 3" ;>
-        <iframe
-          src="drawings.html"
-          frameborder="0"
-          allowfullscreen
-          name="iframe_a"
-          style="width: 100%; height: 100%"
-        ></iframe>
-      </div>-->
-      
+    <button
+        class="gallery-arrow right"
+        type="button"
+        aria-label="Next comics"
+    >
+        <img
+            src="buttons/arrowforward.png"
+            alt=""
+        >
+    </button>
+
+</section>
+
+
+ <!--Contact and Face-->     
     <section class="contact-section">
 
   <div class="contact-left">
-    <img src="images/placeholder_lizard.png" alt="Artwork">
+    <img src="buttons/seandance.gif" alt="Artwork">
 
   </div>
 
@@ -110,26 +876,1057 @@
 
 </section>
 
-<!--<div class="contact_container">
-  <h1>Want to work together? Get in touch!</h1>
-  <form target="_blank" action="https://formsubmit.co/hello@seano.world" method="POST">
-    <div class="form_group">
-      <div class="form_row">
-        <div class="col">
-          <input type="text" name="name" class="form-control" placeholder="Name" required>
-        </div>
-        <div class="col">
-          <input type="email" name="email" class="form-control" placeholder="Email Address" required>
-        </div>
-      </div>
-    </div>
-    <div class="form_group">
-      <textarea placeholder="Your Message" class="form_control" name="message" rows="5" required></textarea>
-    </div>
-    <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
-  </form>
-</div>-->
+
+
+
     <br />
-    <footer>copyrights © 2026 Sean Mac. Images on this site may not be used or distributed without permission. Website built by me using html/css.</footer>
-  </body>
+    <footer>
+    copyrights © 2026 Sean Mac. Images on this site may not be used or
+    distributed without permission. Website built by me using html/css.
+</footer>
+
+<div class="galleryBackdrop"></div>
+
+
+<!--Lightbox Illustratin Gallery------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<div class="art-lightbox" id="artLightbox" aria-hidden="true">
+            <button
+    class="comic-close-button"
+    id="comicCloseButton"
+    type="button"
+    aria-label="Close comic"
+>
+    <img src="buttons/home.gif" alt="Close">
+</button>
+
+    <div class="art-lightbox-panel">
+
+<div
+    class="comic-reader-area"
+    id="comicReaderArea"
+>
+    <div class="comic-reader-header">
+        <h2 id="comicReaderTitle"></h2>
+        <p>scroll down to read</p>
+    </div>
+
+    <div
+        class="comic-reader-pages"
+        id="comicReaderPages"
+    ></div>
+</div>
+
+        <div class="art-lightbox-image-area">
+            <img
+                id="artLightboxImage"
+                src=""
+                alt=""
+            >
+        </div>
+
+        <div class="art-lightbox-info">
+
+    <div class="art-lightbox-text">
+
+        <h2 id="artLightboxTitle"></h2>
+
+        <p
+            class="art-lightbox-year"
+            id="artLightboxYear"
+        ></p>
+
+        <p
+            class="art-lightbox-description"
+            id="artLightboxDescription"
+        ></p>
+
+    </div>
+<div class="art-lightbox-production">
+
+    <p
+        class="art-lightbox-process"
+        id="artLightboxProcess"
+    ></p>
+
+    <div
+        class="art-lightbox-colors"
+        id="artLightboxColors"
+    ></div>
+
+</div>
+
+    <div class="art-lightbox-controls">
+
+        <button
+            class="lightbox-control-button"
+            id="lightboxPrevious"
+            type="button"
+            aria-label="Previous image"
+        >
+            <img
+                src="buttons/arrowbackward.png"
+                alt=""
+            >
+        </button>
+
+        <button
+            class="lightbox-control-button"
+            id="lightboxClose"
+            type="button"
+            aria-label="Close lightbox"
+        >
+            <img
+                src="buttons/home.gif"
+                alt=""
+            >
+        </button>
+
+        <button
+            class="lightbox-control-button"
+            id="lightboxNext"
+            type="button"
+            aria-label="Next image"
+        >
+            <img
+                src="buttons/arrowforward.png"
+                alt=""
+            >
+        </button>
+
+    </div>
+
+</div>
+
+    </div>
+
+</div>
+
+<!--Lightbox Illustration Gallery End----------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+
+<!--horizontal gallery----------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<script>
+document
+    .querySelectorAll(".horizontal_gallery_container")
+    .forEach(function (container) {
+        const gallery =
+            container.querySelector(".horizontal_gallery");
+
+        const slides =
+            Array.from(
+                container.querySelectorAll(".thumb")
+            );
+
+        const previousButton =
+            container.querySelector(".gallery-arrow.left");
+
+        const nextButton =
+            container.querySelector(".gallery-arrow.right");
+
+        if (
+            !gallery ||
+            slides.length === 0 ||
+            !previousButton ||
+            !nextButton
+        ) {
+            return;
+        }
+
+        let currentIndex = 0;
+        let touchStartX = 0;
+
+        function getVisibleCount() {
+            return container.classList.contains(
+                "five-image-gallery"
+            )
+                ? 5
+                : 1;
+        }
+
+        function getMaximumIndex() {
+            return Math.max(
+                0,
+                slides.length - getVisibleCount()
+            );
+        }
+
+        function getMovementDistance() {
+            const slideWidth =
+                slides[0].getBoundingClientRect().width;
+
+            const galleryStyles =
+                window.getComputedStyle(gallery);
+
+            const gap =
+                parseFloat(galleryStyles.columnGap) ||
+                parseFloat(galleryStyles.gap) ||
+                0;
+
+            return slideWidth + gap;
+        }
+
+        function updateButtons() {
+            const maximumIndex =
+                getMaximumIndex();
+
+            previousButton.disabled =
+                currentIndex === 0;
+
+            nextButton.disabled =
+                currentIndex === maximumIndex;
+        }
+
+        function showSlide(index, smooth = true) {
+            currentIndex = Math.max(
+                0,
+                Math.min(index, getMaximumIndex())
+            );
+
+            const destination =
+                currentIndex * getMovementDistance();
+
+            gallery.scrollTo({
+                left: destination,
+                behavior: smooth ? "smooth" : "auto"
+            });
+
+            updateButtons();
+        }
+
+        previousButton.addEventListener(
+            "click",
+            function () {
+                showSlide(currentIndex - 1);
+            }
+        );
+
+        nextButton.addEventListener(
+            "click",
+            function () {
+                showSlide(currentIndex + 1);
+            }
+        );
+
+        gallery.addEventListener(
+            "touchstart",
+            function (event) {
+                touchStartX =
+                    event.touches[0].clientX;
+            },
+            { passive: true }
+        );
+
+        gallery.addEventListener(
+            "touchend",
+            function (event) {
+                const touchEndX =
+                    event.changedTouches[0].clientX;
+
+                const distance =
+                    touchStartX - touchEndX;
+
+                if (distance > 50) {
+                    showSlide(currentIndex + 1);
+                } else if (distance < -50) {
+                    showSlide(currentIndex - 1);
+                }
+            },
+            { passive: true }
+        );
+
+        let resizeTimer;
+
+        window.addEventListener(
+            "resize",
+            function () {
+                clearTimeout(resizeTimer);
+
+                resizeTimer = setTimeout(
+                    function () {
+                        showSlide(currentIndex, false);
+                    },
+                    100
+                );
+            }
+        );
+
+        gallery.scrollLeft = 0;
+        updateButtons();
+    });
+</script>
+
+<!--Everything else------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<script>
+ const artLightboxProcess =
+    document.getElementById("artLightboxProcess");
+
+const artLightboxColors =
+    document.getElementById("artLightboxColors");
+const artLightbox =
+    document.getElementById("artLightbox");
+
+const artLightboxPanel =
+    artLightbox.querySelector(".art-lightbox-panel");
+
+const artLightboxImage =
+    document.getElementById("artLightboxImage");
+
+const artLightboxTitle =
+    document.getElementById("artLightboxTitle");
+
+const artLightboxYear =
+    document.getElementById("artLightboxYear");
+
+const artLightboxDescription =
+    document.getElementById("artLightboxDescription");
+
+const lightboxPrevious =
+    document.getElementById("lightboxPrevious");
+
+const lightboxNext =
+    document.getElementById("lightboxNext");
+
+const lightboxClose =
+    document.getElementById("lightboxClose");
+
+const artworkImages = Array.from(
+    document.querySelectorAll(
+        ".featured_container img, .reusable-gallery .gallery_item img"
+    )
+);
+const comicCovers =
+    document.querySelectorAll(".comic-cover");
+
+const comicReaderArea =
+    document.getElementById("comicReaderArea");
+
+
+const comicReaderPages =
+    document.getElementById("comicReaderPages");
+
+const comicReaderTitle =
+    document.getElementById("comicReaderTitle");
+
+const comicCloseButton =
+    document.getElementById("comicCloseButton");
+
+const lightboxText =
+    document.querySelector(".art-lightbox-text");
+
+let currentArtworkIndex = 0;
+
+
+function updateArtLightbox() {
+    const image =
+        artworkImages[currentArtworkIndex];
+
+    if (!image) {
+        return;
+    }
+const process =
+    image.dataset.process || "";
+
+const colors =
+    image.dataset.colors
+        ? image.dataset.colors.split("|")
+        : [];
+        artLightboxProcess.textContent = process;
+artLightboxProcess.hidden = !process;
+
+artLightboxColors.innerHTML = "";
+
+colors.forEach(function (color) {
+    const colorText =
+        document.createElement("span");
+
+    colorText.className =
+        "art-lightbox-color";
+
+    colorText.textContent =
+        color;
+
+    colorText.style.color =
+        color;
+
+    /*
+    Pure black can be slightly softened so it does
+    not overpower the other labels.
+    */
+    if (
+        color.toLowerCase() === "#000000"
+    ) {
+        colorText.style.color = "#222";
+    }
+
+    artLightboxColors.appendChild(
+        colorText
+    );
+});
+
+artLightboxColors.hidden =
+    colors.length === 0;
+    const title =
+        image.dataset.title || "Untitled";
+
+    const year =
+        image.dataset.year || "";
+
+    const description =
+        image.dataset.info || "";
+
+    artLightboxImage.src =
+        image.currentSrc || image.src;
+
+    artLightboxImage.alt =
+        image.alt || title;
+
+    artLightboxTitle.textContent =
+        title;
+
+    artLightboxYear.textContent =
+        year;
+
+    artLightboxDescription.textContent =
+        description;
+
+    artLightboxYear.hidden = !year;
+    artLightboxDescription.hidden = !description;
+
+    if (lightboxText) {
+        lightboxText.scrollTop = 0;
+    }
+    
+}
+
+
+function openArtLightbox(image) {
+    artLightbox.classList.remove("comic-mode");
+comicReaderPages.innerHTML = "";
+    const clickedIndex =
+        artworkImages.indexOf(image);
+
+    if (clickedIndex === -1) {
+        return;
+    }
+
+    currentArtworkIndex =
+        clickedIndex;
+
+    updateArtLightbox();
+
+    artLightbox.classList.add("open");
+
+    artLightbox.setAttribute(
+        "aria-hidden",
+        "false"
+    );
+
+    document.body.classList.add(
+        "lightbox-open"
+    );
+}
+function openComicReader(cover) {
+    const title =
+        cover.dataset.title || "Comic";
+
+    const pagePaths =
+        (cover.dataset.pages || "")
+            .split("|")
+            .map(function (path) {
+                return path.trim();
+            })
+            .filter(Boolean);
+
+    if (pagePaths.length === 0) {
+        return;
+    }
+
+    /*
+    Switch the existing artwork lightbox
+    into comic-reader mode.
+    */
+    artLightbox.classList.add("comic-mode");
+
+    comicReaderPages.innerHTML = "";
+
+    pagePaths.forEach(function (pagePath, index) {
+        const pageImage =
+            document.createElement("img");
+
+        pageImage.src = pagePath;
+
+        pageImage.alt =
+            `${title}, page ${index + 1}`;
+
+        pageImage.loading =
+            index === 0 ? "eager" : "lazy";
+
+        comicReaderPages.appendChild(
+            pageImage
+        );
+    });
+
+    comicReaderPages.scrollTop = 0;
+
+    artLightbox.classList.add("open");
+
+    artLightbox.setAttribute(
+        "aria-hidden",
+        "false"
+    );
+
+    document.body.classList.add(
+        "lightbox-open"
+    );
+}
+
+function closeArtLightbox() {
+    artLightbox.classList.remove("open");
+
+    artLightbox.setAttribute(
+        "aria-hidden",
+        "true"
+    );
+
+    document.body.classList.remove(
+        "lightbox-open"
+    );
+
+    setTimeout(function () {
+        if (
+            !artLightbox.classList.contains("open")
+        ) {
+            artLightboxImage.src = "";
+
+            comicReaderPages.innerHTML = "";
+
+            artLightbox.classList.remove(
+                "comic-mode"
+            );
+        }
+    }, 250);
+}
+
+
+function showPreviousArtwork() {
+    currentArtworkIndex =
+        (
+            currentArtworkIndex -
+            1 +
+            artworkImages.length
+        ) % artworkImages.length;
+
+    updateArtLightbox();
+}
+
+
+function showNextArtwork() {
+    currentArtworkIndex =
+        (
+            currentArtworkIndex + 1
+        ) % artworkImages.length;
+
+    updateArtLightbox();
+}
+
+
+/* Open lightbox when an artwork is clicked */
+artworkImages.forEach(function (image) {
+    image.addEventListener(
+        "click",
+        function (event) {
+            event.stopPropagation();
+            openArtLightbox(image);
+        }
+    );
+});
+
+
+/* Previous button */
+lightboxPrevious.addEventListener(
+    "click",
+    function (event) {
+        event.stopPropagation();
+        showPreviousArtwork();
+    }
+);
+
+
+/* Next button */
+lightboxNext.addEventListener(
+    "click",
+    function (event) {
+        event.stopPropagation();
+        showNextArtwork();
+    }
+);
+
+
+/* Close button */
+lightboxClose.addEventListener(
+    "click",
+    function (event) {
+        event.stopPropagation();
+        closeArtLightbox();
+    }
+);
+
+
+/* Clicking the dark background closes the lightbox */
+artLightbox.addEventListener(
+    "click",
+    function (event) {
+        if (event.target === artLightbox) {
+            closeArtLightbox();
+        }
+    }
+);
+
+
+/* Clicking inside the white panel does not close it */
+artLightboxPanel.addEventListener(
+    "click",
+    function (event) {
+        event.stopPropagation();
+    }
+);
+
+
+/* Keyboard controls */
+document.addEventListener(
+    "keydown",
+    function (event) {
+        if (
+            !artLightbox.classList.contains("open")
+        ) {
+            return;
+        }
+
+        if (event.key === "Escape") {
+            closeArtLightbox();
+        }
+
+        if (event.key === "ArrowLeft") {
+            showPreviousArtwork();
+        }
+
+        if (event.key === "ArrowRight") {
+            showNextArtwork();
+        }
+    }
+);
+
+
+comicCovers.forEach(function (cover) {
+    cover.addEventListener(
+        "click",
+        function (event) {
+            event.stopPropagation();
+            openComicReader(cover);
+        }
+    );
+});
+
+const reusableGalleries =
+    document.querySelectorAll(".reusable-gallery");
+
+const galleryBackdrop =
+    document.querySelector(".galleryBackdrop");
+
+let activeExpandedGallery = null;
+
+
+/*
+Find the masonry grid that contains an item,
+then calculate the item's required row span.
+*/
+function resizeMasonryItem(item) {
+    if (!item) {
+        return;
+    }
+
+    const grid =
+        item.closest(".art_gallery");
+
+    if (!grid) {
+        return;
+    }
+
+    const gridStyles =
+        window.getComputedStyle(grid);
+
+    const rowHeight =
+        parseFloat(
+            gridStyles.getPropertyValue(
+                "grid-auto-rows"
+            )
+        );
+
+    const rowGap =
+        parseFloat(
+            gridStyles.getPropertyValue(
+                "row-gap"
+            )
+        ) || 0;
+
+    if (!rowHeight) {
+        return;
+    }
+
+    const itemHeight =
+        item.getBoundingClientRect().height;
+
+    const rowSpan =
+        Math.ceil(
+            (itemHeight + rowGap) /
+            (rowHeight + rowGap)
+        );
+
+    item.style.gridRowEnd =
+        `span ${rowSpan}`;
+}
+
+
+/*
+Recalculate the masonry layout for one gallery.
+*/
+function resizeGalleryMasonry(container) {
+    const items =
+        container.querySelectorAll(
+            ".gallery_item:not(.gallery-hidden)"
+        );
+
+    items.forEach(function (item) {
+        item.style.gridRowEnd = "auto";
+    });
+
+    requestAnimationFrame(function () {
+        items.forEach(resizeMasonryItem);
+    });
+}
+
+
+/*
+Reveal all items before taking measurements.
+*/
+function showAllGalleryItems(container) {
+    const items =
+        container.querySelectorAll(".gallery_item");
+
+    items.forEach(function (item) {
+        item.classList.remove("gallery-hidden");
+    });
+}
+
+
+/*
+Set the normal collapsed height using the
+value written in data-collapsed-height.
+*/
+function setCollapsedGalleryHeight(container) {
+    if (
+        container.classList.contains("expanded")
+    ) {
+        return;
+    }
+
+    const collapsedHeight =
+        Number(container.dataset.collapsedHeight);
+
+    if (collapsedHeight) {
+        container.style.height =
+            `${collapsedHeight}px`;
+    }
+}
+
+
+/*
+Hide artwork that does not fit completely
+inside the collapsed gallery.
+*/
+function hideIncompleteGalleryItems(container) {
+    if (
+        container.classList.contains("expanded")
+    ) {
+        showAllGalleryItems(container);
+        return;
+    }
+
+    showAllGalleryItems(container);
+
+    requestAnimationFrame(function () {
+        const containerRect =
+            container.getBoundingClientRect();
+
+        /*
+        Leave room at the bottom for the
+        Show All/fullscreen button.
+        */
+        const usableBottom =
+            containerRect.bottom - 105;
+
+        const items =
+            container.querySelectorAll(
+                ".gallery_item"
+            );
+
+        items.forEach(function (item) {
+            const itemRect =
+                item.getBoundingClientRect();
+
+            const fullyVisible =
+                itemRect.top >= containerRect.top &&
+                itemRect.bottom <= usableBottom;
+
+            item.classList.remove("gallery-hidden");
+        });
+    });
+}
+
+
+/*
+Build the normal collapsed version
+of one gallery.
+*/
+function refreshCollapsedGallery(container) {
+    if (
+        container.classList.contains("expanded")
+    ) {
+        return;
+    }
+
+    showAllGalleryItems(container);
+    setCollapsedGalleryHeight(container);
+
+    requestAnimationFrame(function () {
+        resizeGalleryMasonry(container);
+
+        requestAnimationFrame(function () {
+            hideIncompleteGalleryItems(
+                container
+            );
+        });
+    });
+}
+
+
+/*
+Open one gallery in fullscreen mode.
+*/
+function openReusableGallery(container) {
+    if (
+        activeExpandedGallery &&
+        activeExpandedGallery !== container
+    ) {
+        closeReusableGallery(
+            activeExpandedGallery
+        );
+    }
+
+    activeExpandedGallery = container;
+
+    showAllGalleryItems(container);
+
+    container.style.height = "";
+
+    container.classList.add("expanded");
+
+    galleryBackdrop.classList.add("visible");
+
+    document.body.classList.add(
+        "gallery-open"
+    );
+
+    container.scrollTop = 0;
+
+    const button =
+        container.querySelector(
+            ".gallery-toggle"
+        );
+
+    if (button) {
+        button.setAttribute(
+            "aria-label",
+            "Close gallery"
+        );
+    }
+
+    requestAnimationFrame(function () {
+        requestAnimationFrame(function () {
+            resizeGalleryMasonry(container);
+        });
+    });
+}
+
+
+/*
+Close one fullscreen gallery.
+*/
+function closeReusableGallery(container) {
+    if (!container) {
+        return;
+    }
+
+    container.classList.remove("expanded");
+
+    container.scrollTop = 0;
+
+    const button =
+        container.querySelector(
+            ".gallery-toggle"
+        );
+
+    if (button) {
+        const galleryName =
+            container.id === "risoGallery"
+                ? "Risograph prints"
+                : "illustrations";
+
+        button.setAttribute(
+            "aria-label",
+            `Show all ${galleryName}`
+        );
+    }
+
+    activeExpandedGallery = null;
+
+    galleryBackdrop.classList.remove(
+        "visible"
+    );
+
+    document.body.classList.remove(
+        "gallery-open"
+    );
+
+    requestAnimationFrame(function () {
+        refreshCollapsedGallery(container);
+    });
+}
+
+
+/*
+Initialize each reusable gallery.
+*/
+reusableGalleries.forEach(function (container) {
+    const toggleButton =
+        container.querySelector(
+            ".gallery-toggle"
+        );
+
+    if (toggleButton) {
+        toggleButton.addEventListener(
+            "click",
+            function (event) {
+                event.stopPropagation();
+
+                if (
+                    container.classList.contains(
+                        "expanded"
+                    )
+                ) {
+                    closeReusableGallery(
+                        container
+                    );
+                } else {
+                    openReusableGallery(
+                        container
+                    );
+                }
+            }
+        );
+    }
+
+    const images =
+        container.querySelectorAll(
+            ".gallery_item img"
+        );
+
+    images.forEach(function (image) {
+        if (image.complete) {
+            return;
+        }
+
+        image.addEventListener(
+            "load",
+            function () {
+                refreshCollapsedGallery(
+                    container
+                );
+            }
+        );
+    });
+});
+
+
+galleryBackdrop.addEventListener(
+    "click",
+    function () {
+        closeReusableGallery(
+            activeExpandedGallery
+        );
+    }
+);
+
+
+document.addEventListener(
+    "keydown",
+    function (event) {
+        if (
+            event.key === "Escape" &&
+            activeExpandedGallery
+        ) {
+            closeReusableGallery(
+                activeExpandedGallery
+            );
+        }
+    }
+);
+
+
+let reusableGalleryResizeTimer;
+
+window.addEventListener(
+    "resize",
+    function () {
+        clearTimeout(
+            reusableGalleryResizeTimer
+        );
+
+        reusableGalleryResizeTimer =
+            setTimeout(function () {
+                reusableGalleries.forEach(
+                    function (container) {
+                        refreshCollapsedGallery(
+                            container
+                        );
+                    }
+                );
+            }, 120);
+    }
+);
+
+
+window.addEventListener(
+    "load",
+    function () {
+        reusableGalleries.forEach(
+            function (container) {
+                refreshCollapsedGallery(
+                    container
+                );
+            }
+        );
+    }
+);
+</script>
+
+
+
+
+</body>
 </html>

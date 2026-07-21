@@ -12,8 +12,7 @@
   </head>
   <body>
     <div id="header">
-      <img src="images/head.png" />
-    </div>
+<a href="index.html"><img src="images/head.png" /></a>    </div>
    <div class="nav_container">
     <div class="navlist">
      <ul>
@@ -29,7 +28,8 @@
   <div class="wrapper">
 
  <div class="card profile">
-  <img src="images/caveman_cover.png" alt="Buppy Caveman" id="scrollToGallery" style="cursor:pointer ;">
+  <img src="images/comicgallery/caveman1.jpg" alt="Buppy Caveman" id="scrollToGallery" style="cursor:pointer ;">
+    <p style="text-align: center;">poke me</p>
 </div>
 
   <div class="card intro">
@@ -61,8 +61,21 @@
 
 <div class="gallery" id="gallery">
 
-  
-  <img id="slide" src="images/caveman1.jpg">
+<div class="gallery-display">
+
+    <button class="gallery-arrow" id="galleryPrev">
+        <img src="buttons/arrowbackward.png" alt="Previous">
+    </button>
+
+    <div class="image-frame">
+        <img id="slide" src="images/comicgallery/caveman1.jpg">
+    </div>
+
+    <button class="gallery-arrow" id="galleryNext">
+        <img src="buttons/arrowforward.png" alt="Next">
+    </button>
+
+</div>
 
       <div class="gallery-tools">
 
@@ -103,27 +116,30 @@
 
 <script>
 const images = [
-  "images/caveman1.jpg",
-  "images/caveman2.jpg",
-  "images/caveman3.jpg",
-  "images/caveman4.jpg",
-  "images/caveman4.jpg",
-  "images/caveman5.jpg",
-  "images/caveman6.jpg",
-  "images/caveman7.jpg",
-  "images/caveman8.jpg",
-  "images/caveman8.jpg",
-  "images/caveman9.jpg",
-  "images/caveman10.jpg",
-  "images/caveman11.jpg",
-  "images/caveman12.jpg",
-  "images/caveman13.jpg"
+  "images/comicgallery/caveman1.jpg",
+  "images/comicgallery/caveman2.jpg",
+  "images/comicgallery/caveman3.jpg",
+  "images/comicgallery/caveman4.jpg",
+  "images/comicgallery/caveman4.jpg",
+  "images/comicgallery/caveman5.jpg",
+  "images/comicgallery/caveman6.jpg",
+  "images/comicgallery/caveman7.jpg",
+  "images/comicgallery/caveman8.jpg",
+  "images/comicgallery/caveman8.jpg",
+  "images/comicgallery/caveman9.jpg",
+  "images/comicgallery/caveman10.jpg",
+  "images/comicgallery/caveman11.jpg",
+  "images/comicgallery/caveman12.jpg",
+  "images/comicgallery/caveman13.jpg"
 ];
 
 let index = 0;
 
 const slide = document.getElementById("slide");
-
+const galleryPrev = document.getElementById("galleryPrev");
+const galleryNext = document.getElementById("galleryNext");
+galleryPrev.addEventListener("click", prevImage);
+galleryNext.addEventListener("click", nextImage);
 
 function showImage(i){
 

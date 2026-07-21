@@ -14,8 +14,7 @@
   </head>
   <body>
     <div id="header">
-      <img src="images/head.png" />
-    </div>
+<a href="index.html"><img src="images/head.png" /></a>    </div>
    <div class="nav_container">
     <div class="navlist">
       <ul>
@@ -31,7 +30,8 @@
   <div class="wrapper">
 
  <div class="card profile">
-  <img src="images/repunks_cover.png" alt="Resident Evil Punks" id="scrollToGallery" style="cursor:pointer ;">
+  <img src="images/comicgallery/re.jpg" alt="Resident Evil Punks" id="scrollToGallery" style="cursor:pointer ;">
+    <p style="text-align: center;">poke me</p>
 </div>
 
   <div class="card intro">
@@ -228,9 +228,21 @@ Coil-Binded</p>
 
 <div class="gallery" id="gallery">
 
+<div class="gallery-display">
 
+    <button class="gallery-arrow" id="galleryPrev">
+        <img src="buttons/arrowbackward.png" alt="Previous">
+    </button>
 
-  <img id="slide" src="images/rcp1.jpg">
+    <div class="image-frame">
+        <img id="slide" src="images/comicgallery/repunks1.jpg">
+    </div>
+
+    <button class="gallery-arrow" id="galleryNext">
+        <img src="buttons/arrowforward.png" alt="Next">
+    </button>
+
+</div>
 
      <div class="gallery-tools">
 
@@ -271,15 +283,18 @@ Coil-Binded</p>
 
 <script>
 const images = [
-  "images/rcp1.jpg",
-  "images/rcp2.jpg",
-  "images/rcp3.jpg",
+  "images/comicgallery/rcp1.jpg",
+  "images/comicgallery/rcp2.jpg",
+  "images/comicgallery/rcp3.jpg",
 ];
 
 let index = 0;
 
 const slide = document.getElementById("slide");
-
+const galleryPrev = document.getElementById("galleryPrev");
+const galleryNext = document.getElementById("galleryNext");
+galleryPrev.addEventListener("click", prevImage);
+galleryNext.addEventListener("click", nextImage);
 
 function showImage(i){
 

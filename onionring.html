@@ -12,8 +12,7 @@
   </head>
   <body>
     <div id="header">
-      <img src="images/head.png" />
-    </div>
+<a href="index.html"><img src="images/head.png" /></a>    </div>
    <div class="nav_container">
     <div class="navlist">
            <ul>
@@ -29,7 +28,8 @@
   <div class="wrapper">
 
  <div class="card profile">
-  <img src="images/onionring_cover.png" alt="I Like Manga" id="scrollToGallery" style="cursor:pointer ;">
+  <img src="images/comicgallery/onionring_cover.png" alt="I Like Manga" id="scrollToGallery" style="cursor:pointer ;">
+    <p style="text-align: center;">poke me</p>
 </div>
 
   <div class="card intro">
@@ -63,9 +63,22 @@
 
 <div class="gallery" id="gallery">
 
-  
+<div class="gallery-display">
 
-  <img id="slide" src="images/onion1.jpg">
+    <button class="gallery-arrow" id="galleryPrev">
+        <img src="buttons/arrowbackward.png" alt="Previous">
+    </button>
+
+    <div class="image-frame">
+        <img id="slide" src="images/comicgallery/onion1.jpg">
+    </div>
+
+    <button class="gallery-arrow" id="galleryNext">
+        <img src="buttons/arrowforward.png" alt="Next">
+    </button>
+
+</div>
+
 
     <div class="gallery-tools">
 
@@ -106,9 +119,9 @@
 
 <script>
 const images = [
-  "images/onion1.jpg",
-  "images/onion2.jpg",
-  "images/onion3.jpg",
+  "images/comicgallery/onion1.jpg",
+  "images/comicgallery/onion2.jpg",
+  "images/comicgallery/onion3.jpg",
   
 ];
 
@@ -116,7 +129,10 @@ let index = 0;
 
 const slide = document.getElementById("slide");
 
-
+const galleryPrev = document.getElementById("galleryPrev");
+const galleryNext = document.getElementById("galleryNext");
+galleryPrev.addEventListener("click", prevImage);
+galleryNext.addEventListener("click", nextImage);
 function showImage(i){
 
     index = (i + images.length) % images.length;
