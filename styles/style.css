@@ -1190,3 +1190,123 @@ body.lightbox-open {
 }
 
 
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 900px) {
+
+    /* Overall page */
+    .portfolio_layout{
+        grid-template-columns: 1fr;
+        width: 95%;
+        gap: 20px;
+    }
+
+    .left_column,
+    .right_column{
+        width:100%;
+    }
+
+    /* Navigation */
+    .navlist ul{
+        flex-wrap:wrap;
+    }
+
+    .navlist li{
+        flex:0 0 50%;
+    }
+
+    .navlist li a{
+        font-size:18px;
+        padding:12px 0;
+    }
+
+    /* White containers */
+    .featured_container,
+    .comic_container,
+    .art_gallery_container,
+    .horizontal_gallery_container,
+    .contact-section{
+        padding:20px;
+        border-radius:18px;
+    }
+
+    /* Featured print info */
+    .featured_info{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    /* Ads carousel */
+    .comic_gallery{
+        height:260px;
+    }
+
+    /* Masonry gallery */
+    .art_gallery{
+        grid-template-columns:repeat(2,1fr);
+        column-gap:12px;
+    }
+
+    /* Comic carousel */
+    .horizontal_gallery_container{
+        min-height:auto;
+    }
+
+    .thumb{
+        aspect-ratio:auto;
+    }
+
+    /* Contact section */
+    .contact-section{
+        flex-direction:column;
+    }
+
+    .contact-left img{
+        margin:auto;
+    }
+
+    /* Lightbox */
+    .art-lightbox{
+        padding:15px;
+    }
+
+    .art-lightbox-panel{
+        width:100%;
+        height:100%;
+        display:flex;
+        flex-direction:column;
+    }
+
+    .art-lightbox-image-area{
+        flex:1;
+        padding:20px;
+    }
+
+    .art-lightbox-info{
+        border-left:none;
+        border-top:1px solid #ddd;
+        padding:20px;
+    }
+
+    .art-lightbox-controls{
+        justify-content:center;
+    }
+
+    /* Comic reader */
+    .comic-reader-pages{
+        padding:12px;
+    }
+
+    .comic-reader-pages img{
+        max-width:100%;
+    }
+
+    .comic-close-button{
+        width:55px;
+        height:55px;
+        top:15px;
+        right:15px;
+    }
+}
